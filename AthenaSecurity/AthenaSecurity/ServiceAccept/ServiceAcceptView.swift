@@ -24,6 +24,7 @@ struct ServiceAcceptView: View {
                         .padding(.top, 8)
                     
                     switch viewStore.state.route {
+                        
                     case .respond:
                         Text("This user has requested your services")
                             .font(.custom(FontsManager.Poppins.regular, size: 10))
@@ -37,24 +38,38 @@ struct ServiceAcceptView: View {
                         HStack (spacing: 15) {
                             AcceptRejectButtonView(buttonType: .accept, buttonLabel: "Accept") {
                                 viewStore.send(.accept)
-                                print("DEBUG: Handle Accept Emergency...")
                             }
                             
                             AcceptRejectButtonView(buttonType: .reject, buttonLabel: "Reject") {
                                 viewStore.send(.reject)
-                                print("DEBUG: Handle Reject Emergency...")
                             }
                         }
                         .padding(.horizontal, 30)
                         
-                    case .enRoute:
-                        Text("EnRoute")
                     case .accepted:
-                        Text("Accepted")
+                        AcceptRejectButtonView(buttonType: .accept, buttonLabel: "Get Directions") {
+                            viewStore.send(.getDirections)
+                        }
+                        .padding(.horizontal, 30)
+                        
+                    case .enRoute:
+                        AcceptRejectButtonView(buttonType: .accept, buttonLabel: "Arrived") {
+                            viewStore.send(.arrive)
+                        }
+                        .padding(.horizontal, 30)
                     case .arrived:
-                        Text("Arrived")
+                        AcceptRejectButtonView(buttonType: .accept, buttonLabel: "Complete Services") {
+                            viewStore.send(.complete)
+                        }
+                        .padding(.horizontal, 30)
+
                     case .completed:
-                        Text("Completed")
+                        
+                        // This Logic Is Wrong... But i'm like super tired lol..
+                        AcceptRejectButtonView(buttonType: .accept, buttonLabel: "Set Back To Idle..") {
+                            viewStore.send(.complete)
+                        }
+                        .padding(.horizontal, 30)
                     }
                 }
             }

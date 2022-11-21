@@ -27,7 +27,7 @@ struct AcceptRejectButtonView: View {
                 Text(buttonLabel)
                     .font(.custom(FontsManager.Poppins.semiBold, size: 16))
                     .foregroundColor(.white)
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50)
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 60)
                     .background(Color.theme.green)
                     .cornerRadius(15)
             }
@@ -39,7 +39,7 @@ struct AcceptRejectButtonView: View {
                 Text(buttonLabel)
                     .font(.custom(FontsManager.Poppins.semiBold, size: 16))
                     .foregroundColor(.white)
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50)
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 60)
                     .background(Color.theme.red)
                     .cornerRadius(15)
             }

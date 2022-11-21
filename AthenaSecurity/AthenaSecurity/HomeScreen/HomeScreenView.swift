@@ -23,23 +23,34 @@ struct HomeScreenView: View {
             // Connects Security To WebSocket
             let _ = wsViewModel.subscribeToService()
             // Configures the Home Screen
-            ZStack (alignment: .topLeading) {
-                    Map().edgesIgnoringSafeArea(.all)
-                IfLetStore(
-                    self.store.scope(
-                        state: \.sideMenuFeature,
-                        action: HomeScreenFeature.Action.sideMenuAction)
-                ) { requestStore in
-                    SideMenu(store: requestStore)
+            WithViewStore(self.store) { viewStore in
+                ZStack (alignment: .bottom){
+                    MapViewRepresentable().edgesIgnoringSafeArea(.all)
+                    
+                    ZStack(alignment: .topLeading) {
+                        IfLetStore(
+                            self.store.scope(
+                                state: \.sideMenuFeature,
+                                action: HomeScreenFeature.Action.sideMenuAction)
+                        ) { sideMenuStore in
+                            SideMenu(store: sideMenuStore)
+                        }
+                    }
+                    
+                    IfLetStore(
+                        self.store.scope(
+                            state: \.serviceAcceptFeature,
+                            action: HomeScreenFeature.Action.serviceAcceptAction)
+                    ) { requestStore in
+                        ServiceAcceptView(store: requestStore)
+                    }
                 }
-//                IfLetStore(
-//                    self.store.scope(
-//                        state: \.serviceAcceptFeature,
-//                        action: HomeScreenFeature.Action.serviceAcceptAction)
-//                ) { requestStore in
-//                    ServiceAcceptView(store: requestStore)
-//                }
+                .edgesIgnoringSafeArea(.all)
                 
+                // On Appear is for Testing...
+                .onAppear {
+                    viewStore.send(.onAppear)
+                }
             }
         }
     }

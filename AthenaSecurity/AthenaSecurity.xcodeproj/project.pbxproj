@@ -13,7 +13,7 @@
 		9502E797292B5DF10060BECF /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E796292B5DF10060BECF /* CheckBox.swift */; };
 		9502E799292B5E390060BECF /* PillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E798292B5E390060BECF /* PillButton.swift */; };
 		9502E79B292B5E5B0060BECF /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E79A292B5E5B0060BECF /* CancelButton.swift */; };
-		9502E79D292B5E7E0060BECF /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E79C292B5E7D0060BECF /* Map.swift */; };
+		9502E79D292B5E7E0060BECF /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E79C292B5E7D0060BECF /* MapViewRepresentable.swift */; };
 		9502E7A2292B62E50060BECF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A1292B62E50060BECF /* AuthViewModel.swift */; };
 		9502E7A4292B63090060BECF /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A3292B63090060BECF /* KeychainHelper.swift */; };
 		9502E7A6292B633A0060BECF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A5292B633A0060BECF /* LoginView.swift */; };
@@ -65,7 +65,7 @@
 		9502E796292B5DF10060BECF /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		9502E798292B5E390060BECF /* PillButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillButton.swift; sourceTree = "<group>"; };
 		9502E79A292B5E5B0060BECF /* CancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
-		9502E79C292B5E7D0060BECF /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		9502E79C292B5E7D0060BECF /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
 		9502E7A1292B62E50060BECF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		9502E7A3292B63090060BECF /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		9502E7A5292B633A0060BECF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -133,7 +133,6 @@
 				9502E796292B5DF10060BECF /* CheckBox.swift */,
 				9502E798292B5E390060BECF /* PillButton.swift */,
 				9502E79A292B5E5B0060BECF /* CancelButton.swift */,
-				9502E79C292B5E7D0060BECF /* Map.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -215,6 +214,14 @@
 			path = HomeScreen;
 			sourceTree = "<group>";
 		};
+		9502E7E8292BA2590060BECF /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				9502E79C292B5E7D0060BECF /* MapViewRepresentable.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		9596849E292B529A002B58A2 = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +243,7 @@
 			children = (
 				959684AA292B529A002B58A2 /* AthenaSecurityApp.swift */,
 				9502E7DF292B66810060BECF /* HomeScreen */,
+				9502E7E8292BA2590060BECF /* Map */,
 				9502E78A292B5B010060BECF /* Components */,
 				9502E78B292B5B360060BECF /* Authentication */,
 				9502E78C292B5B570060BECF /* ServiceAccept */,
@@ -378,7 +386,7 @@
 				9502E7E1292B71D10060BECF /* HomeScreenFeature.swift in Sources */,
 				9502E7B2292B64C00060BECF /* WebSocketClient.swift in Sources */,
 				9502E7AE292B63D90060BECF /* DismissKeyboard.swift in Sources */,
-				9502E79D292B5E7E0060BECF /* Map.swift in Sources */,
+				9502E79D292B5E7E0060BECF /* MapViewRepresentable.swift in Sources */,
 				9502E79B292B5E5B0060BECF /* CancelButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

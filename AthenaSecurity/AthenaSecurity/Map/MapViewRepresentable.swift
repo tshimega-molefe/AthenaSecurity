@@ -8,7 +8,7 @@
 import SwiftUI
 import MapboxMaps
 
-struct Map: UIViewControllerRepresentable {
+struct MapViewRepresentable: UIViewControllerRepresentable {
     
      
     func makeUIViewController(context: Context) -> MapViewController {

@@ -38,14 +38,17 @@ struct ServiceAcceptFeature: ReducerProtocol {
             
         case .reject:
             state.route = .completed
+            print("DEBUG: Handle Reject Emergency...")
             return .none
             
         case .accept:
             state.route = .accepted
+            print("DEBUG: Handle Accept Emergency...")
             return .none
             
         case .getDirections:
             state.route = .enRoute
+            print("DEBUG: Run Get Directions API with MapBox..")
             return .none
     
         case .arrive:
