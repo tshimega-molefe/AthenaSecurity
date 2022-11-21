@@ -48,13 +48,13 @@ struct ServiceAcceptView: View {
                         
                     case .accepted:
                         AcceptRejectButtonView(buttonType: .accept, buttonLabel: "Get Directions") {
-                            viewStore.send(.getDirections)
+                            viewStore.send(.arrive)
                         }
                         .padding(.horizontal, 30)
                         
                     case .enRoute:
                         AcceptRejectButtonView(buttonType: .accept, buttonLabel: "Arrived") {
-                            viewStore.send(.arrive)
+                            viewStore.send(.complete)
                         }
                         .padding(.horizontal, 30)
                     case .arrived:

@@ -23,7 +23,6 @@
 		9502E7AE292B63D90060BECF /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7AD292B63D90060BECF /* DismissKeyboard.swift */; };
 		9502E7B0292B64200060BECF /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7AF292B64200060BECF /* WebService.swift */; };
 		9502E7B2292B64C00060BECF /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7B1292B64C00060BECF /* WebSocketClient.swift */; };
-		9502E7B4292B64E20060BECF /* WebSocketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7B3292B64E20060BECF /* WebSocketViewModel.swift */; };
 		9502E7B6292B65120060BECF /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7B5292B65120060BECF /* APIError.swift */; };
 		9502E7CB292B65580060BECF /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7B7292B65570060BECF /* OFL.txt */; };
 		9502E7CC292B65580060BECF /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7B8292B65570060BECF /* Poppins-ExtraLight.ttf */; };
@@ -53,9 +52,10 @@
 		959684AD292B529A002B58A2 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959684AC292B529A002B58A2 /* HomeScreenView.swift */; };
 		959684AF292B529B002B58A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959684AE292B529B002B58A2 /* Assets.xcassets */; };
 		959684B2292B529B002B58A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959684B1292B529B002B58A2 /* Preview Assets.xcassets */; };
-		959684BA292B52E1002B58A2 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 959684B9292B52E1002B58A2 /* ComposableArchitecture */; };
-		959684BC292B52E1002B58A2 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 959684BB292B52E1002B58A2 /* Dependencies */; };
 		959684C0292B55D9002B58A2 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 959684BF292B55D9002B58A2 /* MapboxMaps */; };
+		B3763FAA292BC1650091F593 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B3763FA9292BC1650091F593 /* ComposableArchitecture */; };
+		B3763FAC292BC1650091F593 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = B3763FAB292BC1650091F593 /* Dependencies */; };
+		B3763FAE292BCC0A0091F593 /* EmergencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3763FAD292BCC0A0091F593 /* EmergencyModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,7 +75,6 @@
 		9502E7AD292B63D90060BECF /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
 		9502E7AF292B64200060BECF /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		9502E7B1292B64C00060BECF /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
-		9502E7B3292B64E20060BECF /* WebSocketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketViewModel.swift; sourceTree = "<group>"; };
 		9502E7B5292B65120060BECF /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		9502E7B7292B65570060BECF /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		9502E7B8292B65570060BECF /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -107,6 +106,7 @@
 		959684AE292B529B002B58A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		959684B1292B529B002B58A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		959684BD292B54AF002B58A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B3763FAD292BCC0A0091F593 /* EmergencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +114,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3763FAC292BC1650091F593 /* Dependencies in Frameworks */,
+				B3763FAA292BC1650091F593 /* ComposableArchitecture in Frameworks */,
 				959684C0292B55D9002B58A2 /* MapboxMaps in Frameworks */,
-				959684BA292B52E1002B58A2 /* ComposableArchitecture in Frameworks */,
-				959684BC292B52E1002B58A2 /* Dependencies in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +152,7 @@
 			children = (
 				9502E7A7292B63770060BECF /* ServiceAcceptFeature.swift */,
 				9502E7A9292B63940060BECF /* ServiceAcceptView.swift */,
+				B3763FAD292BCC0A0091F593 /* EmergencyModel.swift */,
 			);
 			path = ServiceAccept;
 			sourceTree = "<group>";
@@ -170,7 +171,6 @@
 			children = (
 				9502E7AF292B64200060BECF /* WebService.swift */,
 				9502E7B1292B64C00060BECF /* WebSocketClient.swift */,
-				9502E7B3292B64E20060BECF /* WebSocketViewModel.swift */,
 				9502E7B5292B65120060BECF /* APIError.swift */,
 			);
 			path = Service;
@@ -208,8 +208,6 @@
 			children = (
 				959684AC292B529A002B58A2 /* HomeScreenView.swift */,
 				9502E7E0292B71D10060BECF /* HomeScreenFeature.swift */,
-				9502E7E2292B72430060BECF /* SideMenuView.swift */,
-				9502E7E4292B725B0060BECF /* SideMenuFeature.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -242,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				959684AA292B529A002B58A2 /* AthenaSecurityApp.swift */,
+				B3763FAF292BD9C50091F593 /* SideMenu */,
 				9502E7DF292B66810060BECF /* HomeScreen */,
 				9502E7E8292BA2590060BECF /* Map */,
 				9502E78A292B5B010060BECF /* Components */,
@@ -265,6 +264,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B3763FAF292BD9C50091F593 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				9502E7E2292B72430060BECF /* SideMenuView.swift */,
+				9502E7E4292B725B0060BECF /* SideMenuFeature.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -282,9 +290,9 @@
 			);
 			name = AthenaSecurity;
 			packageProductDependencies = (
-				959684B9292B52E1002B58A2 /* ComposableArchitecture */,
-				959684BB292B52E1002B58A2 /* Dependencies */,
 				959684BF292B55D9002B58A2 /* MapboxMaps */,
+				B3763FA9292BC1650091F593 /* ComposableArchitecture */,
+				B3763FAB292BC1650091F593 /* Dependencies */,
 			);
 			productName = AthenaSecurity;
 			productReference = 959684A7292B529A002B58A2 /* AthenaSecurity.app */;
@@ -315,8 +323,8 @@
 			);
 			mainGroup = 9596849E292B529A002B58A2;
 			packageReferences = (
-				959684B8292B52E1002B58A2 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				959684BE292B55D9002B58A2 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+				B3763FA8292BC1650091F593 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = 959684A8292B529A002B58A2 /* Products */;
 			projectDirPath = "";
@@ -367,7 +375,6 @@
 				9502E7A2292B62E50060BECF /* AuthViewModel.swift in Sources */,
 				9502E795292B5D6D0060BECF /* CustomInputField.swift in Sources */,
 				9502E7A8292B63770060BECF /* ServiceAcceptFeature.swift in Sources */,
-				9502E7B4292B64E20060BECF /* WebSocketViewModel.swift in Sources */,
 				959684AD292B529A002B58A2 /* HomeScreenView.swift in Sources */,
 				9502E7B0292B64200060BECF /* WebService.swift in Sources */,
 				9502E797292B5DF10060BECF /* CheckBox.swift in Sources */,
@@ -386,6 +393,7 @@
 				9502E7E1292B71D10060BECF /* HomeScreenFeature.swift in Sources */,
 				9502E7B2292B64C00060BECF /* WebSocketClient.swift in Sources */,
 				9502E7AE292B63D90060BECF /* DismissKeyboard.swift in Sources */,
+				B3763FAE292BCC0A0091F593 /* EmergencyModel.swift in Sources */,
 				9502E79D292B5E7E0060BECF /* MapViewRepresentable.swift in Sources */,
 				9502E79B292B5E5B0060BECF /* CancelButton.swift in Sources */,
 			);
@@ -606,14 +614,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		959684B8292B52E1002B58A2 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		959684BE292B55D9002B58A2 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
@@ -622,23 +622,31 @@
 				kind = branch;
 			};
 		};
+		B3763FA8292BC1650091F593 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		959684B9292B52E1002B58A2 /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 959684B8292B52E1002B58A2 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
-		};
-		959684BB292B52E1002B58A2 /* Dependencies */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 959684B8292B52E1002B58A2 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = Dependencies;
-		};
 		959684BF292B55D9002B58A2 /* MapboxMaps */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 959684BE292B55D9002B58A2 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
 			productName = MapboxMaps;
+		};
+		B3763FA9292BC1650091F593 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B3763FA8292BC1650091F593 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		B3763FAB292BC1650091F593 /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B3763FA8292BC1650091F593 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = Dependencies;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

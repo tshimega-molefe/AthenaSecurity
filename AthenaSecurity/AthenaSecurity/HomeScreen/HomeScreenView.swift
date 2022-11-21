@@ -11,7 +11,6 @@ import ComposableArchitecture
 struct HomeScreenView: View {
     
     @EnvironmentObject var userAuth: AuthViewModel
-    @EnvironmentObject var wsViewModel: WebSocketViewModel
     
     let store: Store<HomeScreenFeature.State, HomeScreenFeature.Action>
     
@@ -20,8 +19,7 @@ struct HomeScreenView: View {
         if !userAuth.isAuthenticated {
             LoginView()
         } else {
-            // Connects Security To WebSocket
-            let _ = wsViewModel.subscribeToService()
+
             // Configures the Home Screen
             WithViewStore(self.store) { viewStore in
                 ZStack (alignment: .bottom){
@@ -50,6 +48,7 @@ struct HomeScreenView: View {
                 // On Appear is for Testing...
                 .onAppear {
                     viewStore.send(.onAppear)
+                    viewStore.send(.connectOrDisconnect)
                 }
             }
         }

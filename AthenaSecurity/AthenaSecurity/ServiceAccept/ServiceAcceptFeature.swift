@@ -25,6 +25,7 @@ struct ServiceAcceptFeature: ReducerProtocol {
         case completed
     }
     
+    
     enum Action: Equatable {
         case reject
         case accept
