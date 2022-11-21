@@ -1,5 +1,5 @@
 //
-//  ServiceRequestView.swift
+//  ServiceAcceptView.swift
 //  AthenaSecurity
 //
 //  Created by Tshimega Belmont on 2022/11/21.
@@ -8,8 +8,8 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct ServiceRequestView: View {
-    let store: Store<ServiceRequestFeature.State, ServiceRequestFeature.Action>
+struct ServiceAcceptView: View {
+    let store: Store<ServiceAcceptFeature.State, ServiceAcceptFeature.Action>
     
     var body: some View {
         /*TODO: Use TCA to only display this view when some value != nil
@@ -24,34 +24,16 @@ struct ServiceRequestView: View {
                         .padding(.top, 8)
                     
                     switch viewStore.state.route {
-                    case .idle:
-                        Text("Swipe to select your preferred option")
-                            .font(.custom(FontManager.Poppins.regular, size: 10))
-                            .foregroundColor(Color.theme.secondaryText)
-                            .padding(.top)
-                        
-                        // Security Responder Information View
-                        ResponderView()
-                        
-                        // Payment Option View
-                        PaymentOptionView()
-                        
-                        // Request Service button
-                        AuthButtonView(buttonLabel: "Confirm ARES") {
-                            viewStore.send(.confirm)
-                        }
-                    case .confirmed:
-                        Text("Requesting Help...")
-                            .padding(.top)
-                        Button("Move to accepted") {
-                            viewStore.send(.accept)
-                        }
+                    case .respond:
+                        Text("Respond")
+                    case .enRoute:
+                        Text("EnRoute")
                     case .accepted:
-                        Text("Help is on the way...")
-                            .padding(.top)
-                        ResponderView()
+                        Text("Accepted")
+                    case .arrived:
+                        Text("Arrived")
                     case .completed:
-                        Text("Trip Completed")
+                        Text("Completed")
                     }
                 }
             }
@@ -62,10 +44,10 @@ struct ServiceRequestView: View {
     }
 }
 
-struct ServiceRequestView_Previews: PreviewProvider {
+struct ServiceAcceptView_Previews: PreviewProvider {
     static var previews: some View {
-        ServiceRequestView(store: Store(initialState: ServiceRequestFeature.State(),
-                                        reducer: AnyReducer(ServiceRequestFeature()),
+        ServiceAcceptView(store: Store(initialState: ServiceAcceptFeature.State(),
+                                        reducer: AnyReducer(ServiceAcceptFeature()),
                                         environment: ()))
     }
 }

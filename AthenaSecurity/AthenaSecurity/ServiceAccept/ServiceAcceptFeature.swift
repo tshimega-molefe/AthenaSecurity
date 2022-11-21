@@ -1,5 +1,5 @@
 //
-//  ServiceRequestFeature.swift
+//  ServiceAcceptFeature.swift
 //  AthenaSecurity
 //
 //  Created by Tshimega Belmont on 2022/11/21.
@@ -8,7 +8,7 @@
 import Foundation
 import ComposableArchitecture
 
-struct ServiceRequestFeature: ReducerProtocol {
+struct ServiceAcceptFeature: ReducerProtocol {
     
     struct State: Equatable {
         // TODO: Create User Data model so data can be pulled into User View

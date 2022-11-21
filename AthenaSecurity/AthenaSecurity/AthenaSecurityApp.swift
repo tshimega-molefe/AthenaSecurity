@@ -16,7 +16,10 @@ struct AthenaSecurityApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeScreenView()
+            HomeScreenView(store: Store(
+                initialState: HomeScreenFeature.State(),
+                reducer: AnyReducer(HomeScreenFeature()),
+                environment: ()))
                 .environmentObject(userAuth)
                 .environmentObject(wsViewModel)
         }

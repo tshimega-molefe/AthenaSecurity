@@ -17,8 +17,8 @@
 		9502E7A2292B62E50060BECF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A1292B62E50060BECF /* AuthViewModel.swift */; };
 		9502E7A4292B63090060BECF /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A3292B63090060BECF /* KeychainHelper.swift */; };
 		9502E7A6292B633A0060BECF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A5292B633A0060BECF /* LoginView.swift */; };
-		9502E7A8292B63770060BECF /* ServiceRequestFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A7292B63770060BECF /* ServiceRequestFeature.swift */; };
-		9502E7AA292B63940060BECF /* ServiceRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A9292B63940060BECF /* ServiceRequestView.swift */; };
+		9502E7A8292B63770060BECF /* ServiceAcceptFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A7292B63770060BECF /* ServiceAcceptFeature.swift */; };
+		9502E7AA292B63940060BECF /* ServiceAcceptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A9292B63940060BECF /* ServiceAcceptView.swift */; };
 		9502E7AC292B63BC0060BECF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7AB292B63BC0060BECF /* Color.swift */; };
 		9502E7AE292B63D90060BECF /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7AD292B63D90060BECF /* DismissKeyboard.swift */; };
 		9502E7B0292B64200060BECF /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7AF292B64200060BECF /* WebService.swift */; };
@@ -68,8 +68,8 @@
 		9502E7A1292B62E50060BECF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		9502E7A3292B63090060BECF /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		9502E7A5292B633A0060BECF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		9502E7A7292B63770060BECF /* ServiceRequestFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestFeature.swift; sourceTree = "<group>"; };
-		9502E7A9292B63940060BECF /* ServiceRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestView.swift; sourceTree = "<group>"; };
+		9502E7A7292B63770060BECF /* ServiceAcceptFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAcceptFeature.swift; sourceTree = "<group>"; };
+		9502E7A9292B63940060BECF /* ServiceAcceptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAcceptView.swift; sourceTree = "<group>"; };
 		9502E7AB292B63BC0060BECF /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		9502E7AD292B63D90060BECF /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
 		9502E7AF292B64200060BECF /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
@@ -145,13 +145,13 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
-		9502E78C292B5B570060BECF /* ServiceRequest */ = {
+		9502E78C292B5B570060BECF /* ServiceAccept */ = {
 			isa = PBXGroup;
 			children = (
-				9502E7A7292B63770060BECF /* ServiceRequestFeature.swift */,
-				9502E7A9292B63940060BECF /* ServiceRequestView.swift */,
+				9502E7A7292B63770060BECF /* ServiceAcceptFeature.swift */,
+				9502E7A9292B63940060BECF /* ServiceAcceptView.swift */,
 			);
-			path = ServiceRequest;
+			path = ServiceAccept;
 			sourceTree = "<group>";
 		};
 		9502E78D292B5B680060BECF /* Extensions */ = {
@@ -235,7 +235,7 @@
 				9502E7DF292B66810060BECF /* HomeScreen */,
 				9502E78A292B5B010060BECF /* Components */,
 				9502E78B292B5B360060BECF /* Authentication */,
-				9502E78C292B5B570060BECF /* ServiceRequest */,
+				9502E78C292B5B570060BECF /* ServiceAccept */,
 				9502E78E292B5B770060BECF /* Service */,
 				9502E78D292B5B680060BECF /* Extensions */,
 				9502E78F292B5B860060BECF /* Fonts */,
@@ -355,7 +355,7 @@
 				9502E7E3292B72430060BECF /* SideMenuView.swift in Sources */,
 				9502E7A2292B62E50060BECF /* AuthViewModel.swift in Sources */,
 				9502E795292B5D6D0060BECF /* CustomInputField.swift in Sources */,
-				9502E7A8292B63770060BECF /* ServiceRequestFeature.swift in Sources */,
+				9502E7A8292B63770060BECF /* ServiceAcceptFeature.swift in Sources */,
 				9502E7B4292B64E20060BECF /* WebSocketViewModel.swift in Sources */,
 				959684AD292B529A002B58A2 /* HomeScreenView.swift in Sources */,
 				9502E7B0292B64200060BECF /* WebService.swift in Sources */,
@@ -369,7 +369,7 @@
 				9502E7E5292B725B0060BECF /* SideMenuFeature.swift in Sources */,
 				9502E791292B5CF00060BECF /* LoginImage.swift in Sources */,
 				9502E7B6292B65120060BECF /* APIError.swift in Sources */,
-				9502E7AA292B63940060BECF /* ServiceRequestView.swift in Sources */,
+				9502E7AA292B63940060BECF /* ServiceAcceptView.swift in Sources */,
 				9502E799292B5E390060BECF /* PillButton.swift in Sources */,
 				9502E7E1292B71D10060BECF /* HomeScreenFeature.swift in Sources */,
 				9502E7B2292B64C00060BECF /* WebSocketClient.swift in Sources */,

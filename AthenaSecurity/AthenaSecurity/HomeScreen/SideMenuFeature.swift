@@ -21,11 +21,15 @@ struct SideMenuFeature: ReducerProtocol {
     enum Route: Equatable {
         case idle
         case showMenu
+        case onDuty
+        case offDuty
     }
     
     enum Action: Equatable {
         case open
         case close
+        case onDuty
+        case offDuty
     }
     
     func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
@@ -38,6 +42,16 @@ struct SideMenuFeature: ReducerProtocol {
         case .close:
             state.route = .idle
             print("DEBUG: Close The Side Menu..")
+            return .none
+            
+        case .onDuty:
+            state.route = .onDuty
+            print("DEBUG: Security is On Duty..")
+            return .none
+            
+        case .offDuty:
+            state.route = .offDuty
+            print("DEBUG: Security is Off Duty..")
             return .none
         }
     }

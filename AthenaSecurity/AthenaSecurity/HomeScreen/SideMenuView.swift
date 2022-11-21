@@ -32,10 +32,24 @@ struct SideMenu: View {
                 Button {
                     viewStore.send(.close)
                 } label: {
-                    Image(systemName: "list")
+                    Image(systemName: "menucard")
                 }
                 .font(.title)
                 .padding(.leading)
+                
+            case .onDuty:
+                Button {
+                    viewStore.send(.onDuty)
+                } label: {
+                    Text("On Duty..")
+                }
+
+            case .offDuty:
+                Button {
+                    viewStore.send(.offDuty)
+                } label: {
+                    Text("Off Duty..")
+                }
             }
         }
     }
