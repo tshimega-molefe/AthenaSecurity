@@ -26,22 +26,28 @@ struct ServiceRequestFeature: ReducerProtocol {
     }
     
     enum Action: Equatable {
-        case accept
         case reject
+        case accept
+        case getDirections
         case arrive
         case complete
     }
     
     func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
         switch action {
-        case .accept:
-            state.route = .accepted
-            return .none
             
         case .reject:
             state.route = .completed
             return .none
             
+        case .accept:
+            state.route = .accepted
+            return .none
+            
+        case .getDirections:
+            state.route = .enRoute
+            return .none
+    
         case .arrive:
             state.route = .arrived
             return .none
