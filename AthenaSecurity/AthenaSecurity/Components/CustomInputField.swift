@@ -37,7 +37,7 @@ struct CustomInputField: View {
                     TextField(placeholderText, text: $text).keyboardType(.phonePad)
                 }
             }
-            .font(.custom(FontManager.Poppins.regular, size: 15))
+            .font(.custom(FontsManager.Poppins.regular, size: 15))
             .foregroundColor(Color.theme.primaryText)
             .autocorrectionDisabled()
             .accentColor(Color.theme.accent)

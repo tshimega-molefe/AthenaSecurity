@@ -18,7 +18,7 @@ struct AuthHeaderView: View {
                 
             
             Text(authLabel)
-                .font(.custom(FontManager.Poppins.semiBold, size: 36))
+                .font(.custom(FontsManager.Poppins.semiBold, size: 36))
                 .foregroundColor(Color("SecondaryTextColor"))
                 .padding(.top, -2.0)
                 .multilineTextAlignment(.center)

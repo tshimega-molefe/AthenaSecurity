@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FontManager {
+struct FontsManager {
     struct Poppins {
         static let extraLight = "Poppins-ExtraLight"
         static let light = "Poppins-Light"

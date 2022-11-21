@@ -13,7 +13,7 @@ struct AuthButtonView: View {
     var body: some View {
             Button(action: clicked) {
                 Text(buttonLabel)
-                    .font(.custom(FontManager.Poppins.semiBold, size: 16))
+                    .font(.custom(FontsManager.Poppins.semiBold, size: 16))
                     .foregroundColor(.white)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 67)
                     .background(Color.theme.red)

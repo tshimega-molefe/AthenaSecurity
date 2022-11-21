@@ -25,7 +25,28 @@ struct ServiceAcceptView: View {
                     
                     switch viewStore.state.route {
                     case .respond:
-                        Text("Respond")
+                        Text("This user has requested your services")
+                            .font(.custom(FontsManager.Poppins.regular, size: 10))
+                            .foregroundColor(Color.theme.secondaryText)
+                            .padding(.top)
+                        
+                        ResponderView()
+                        
+                        PaymentOptionView()
+                        
+                        HStack (spacing: 15) {
+                            AcceptRejectButtonView(buttonType: .accept, buttonLabel: "Accept") {
+                                viewStore.send(.accept)
+                                print("DEBUG: Handle Accept Emergency...")
+                            }
+                            
+                            AcceptRejectButtonView(buttonType: .reject, buttonLabel: "Reject") {
+                                viewStore.send(.reject)
+                                print("DEBUG: Handle Reject Emergency...")
+                            }
+                        }
+                        .padding(.horizontal, 30)
+                        
                     case .enRoute:
                         Text("EnRoute")
                     case .accepted:
@@ -64,13 +85,9 @@ struct CustomCorner: Shape {
 
 struct ResponderView: View {
     var body: some View {
-        
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack (spacing: 12){
-                ForEach(0 ..< 3, id: \.self) { _ in
                     HStack (alignment: .top) {
                         // Security Profile Image
-                        Image(uiImage: UIImage(imageLiteralResourceName: "security"))
+                        Image(uiImage: UIImage(imageLiteralResourceName: "sabrina"))
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 132.66, height: 200)
@@ -79,53 +96,53 @@ struct ResponderView: View {
                         
                         VStack (alignment: .leading, spacing: 8) {
                             // Security Name
-                            Text("Soap Mactavish")
-                                .font(.custom(FontManager.Poppins.semiBold, size: 16))
+                            Text("Sabrina Morreno")
+                                .font(.custom(FontsManager.Poppins.semiBold, size: 16))
                                 .foregroundColor(Color.theme.primaryText)
                                 .padding(.bottom, 8)
                             
                             // Security Unit
-                            Text("Task Force 141")
-                                .font(.custom(FontManager.Poppins.light, size: 12))
+                            Text("Douglasdale, Fourways")
+                                .font(.custom(FontsManager.Poppins.light, size: 12))
                                 .foregroundColor(Color.theme.grey)
                             
                             // Security Vehicle
-                            Text("BMW M8 Competition - ")
-                                .font(.custom(FontManager.Poppins.light, size: 12))
+                            Text("8 Gereonemo Avenue - ")
+                                .font(.custom(FontsManager.Poppins.light, size: 12))
                                 .foregroundColor(Color.theme.grey)
                             
                             +
                             // Vehicle Color
-                            Text("Black")
-                                .font(.custom(FontManager.Poppins.semiBold, size: 12))
+                            Text("1045")
+                                .font(.custom(FontsManager.Poppins.semiBold, size: 12))
                                 .foregroundColor(Color.theme.primaryText)
                             
                             // Vehicle Registration
-                            Text("GHOST141 GP")
-                                .font(.custom(FontManager.Poppins.light, size: 12))
+                            Text("JB 77 77 GP")
+                                .font(.custom(FontsManager.Poppins.light, size: 12))
                                 .foregroundColor(Color.theme.grey)
                             
                             // Estimated Time Of Arrival
                             Text("ETA: ")
-                                .font(.custom(FontManager.Poppins.light, size: 12))
+                                .font(.custom(FontsManager.Poppins.light, size: 12))
                                 .foregroundColor(Color.theme.grey)
                             
                             +
                             
                             Text("3 MIN")
-                                .font(.custom(FontManager.Poppins.light, size: 12))
+                                .font(.custom(FontsManager.Poppins.light, size: 12))
                                 .foregroundColor(Color.theme.accent)
                             
                             // Service Price
                             HStack {
                                 
                                 Text("R ")
-                                    .font(.custom(FontManager.Poppins.semiBold, size: 16))
+                                    .font(.custom(FontsManager.Poppins.semiBold, size: 16))
                                     .foregroundColor(.primary)
                                 +
                                 
                                 Text("159,00")
-                                    .font(.custom(FontManager.Poppins.semiBold, size: 16))
+                                    .font(.custom(FontsManager.Poppins.semiBold, size: 16))
                                     .foregroundColor(.primary)
                             }
                             .padding(.top, 40)
@@ -133,29 +150,21 @@ struct ResponderView: View {
                         .padding(.leading)
                     }
                     .padding(.top)
-                }
-            }
-        }.padding(.horizontal, 30)
     }
 }
 
 struct PaymentOptionView: View {
     var body: some View {
         HStack (spacing: 12) {
+            
+            Text("Selected Payment Method")
+                .font(.custom(FontsManager.Poppins.regular, size: 20))
+                .foregroundColor(Color.theme.primaryText)
+            Spacer()
             Image(systemName: "creditcard.fill")
                 .font(.subheadline)
                 .foregroundColor(.primary)
                 .padding(.leading)
-            
-            Text("** 5117")
-                .font(.custom(FontManager.Poppins.regular, size: 20))
-                .foregroundColor(Color.theme.primaryText)
-            
-            Spacer()
-            Image(systemName: "chevron.right")
-                .imageScale(.medium)
-                .foregroundColor(Color.theme.accent)
-                .padding()
             
         }
         .frame(height: 50)

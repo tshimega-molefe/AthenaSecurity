@@ -46,7 +46,7 @@ struct LoginView: View {
                         Text("Reset Password")
                     } label: {
                         Text("Forgot Password?")
-                            .font(.custom(FontManager.Poppins.regular, size: 15))
+                            .font(.custom(FontsManager.Poppins.regular, size: 15))
                             .foregroundColor(Color.theme.accent)
                         
                     }
@@ -62,7 +62,7 @@ struct LoginView: View {
                         print("DEBUG: There is missing information in either of the log in fields..")
                     }, label: {
                         Text("Log In")
-                            .font(.custom(FontManager.Poppins.semiBold, size: 16))
+                            .font(.custom(FontsManager.Poppins.semiBold, size: 16))
                             .foregroundColor(.white)
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 67)
                             .background(Color(.systemGray6))

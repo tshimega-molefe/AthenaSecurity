@@ -15,7 +15,7 @@ struct PillButton: View {
         Button(action: cancel,
                label: {
                     Text(text)
-                    .font(.custom(FontManager.Poppins.semiBold, size: 16))
+                    .font(.custom(FontsManager.Poppins.semiBold, size: 16))
                     .foregroundColor(Color.theme.accent)
                     .frame(width: 100, height: 40)
                     .background(Color.theme.background)

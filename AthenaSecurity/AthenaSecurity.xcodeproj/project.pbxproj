@@ -32,7 +32,7 @@
 		9502E7CF292B65580060BECF /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7BB292B65570060BECF /* Poppins-ExtraLightItalic.ttf */; };
 		9502E7D0292B65580060BECF /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7BC292B65570060BECF /* Poppins-Black.ttf */; };
 		9502E7D1292B65580060BECF /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7BD292B65570060BECF /* Poppins-ExtraBoldItalic.ttf */; };
-		9502E7D2292B65580060BECF /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7BE292B65580060BECF /* FontManager.swift */; };
+		9502E7D2292B65580060BECF /* FontsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7BE292B65580060BECF /* FontsManager.swift */; };
 		9502E7D3292B65580060BECF /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7BF292B65580060BECF /* Poppins-BoldItalic.ttf */; };
 		9502E7D4292B65580060BECF /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7C0292B65580060BECF /* Poppins-Regular.ttf */; };
 		9502E7D5292B65580060BECF /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7C1292B65580060BECF /* Poppins-SemiBoldItalic.ttf */; };
@@ -48,6 +48,7 @@
 		9502E7E1292B71D10060BECF /* HomeScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7E0292B71D10060BECF /* HomeScreenFeature.swift */; };
 		9502E7E3292B72430060BECF /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7E2292B72430060BECF /* SideMenuView.swift */; };
 		9502E7E5292B725B0060BECF /* SideMenuFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7E4292B725B0060BECF /* SideMenuFeature.swift */; };
+		9502E7E7292B9A190060BECF /* AcceptRejectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7E6292B9A190060BECF /* AcceptRejectButton.swift */; };
 		959684AB292B529A002B58A2 /* AthenaSecurityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959684AA292B529A002B58A2 /* AthenaSecurityApp.swift */; };
 		959684AD292B529A002B58A2 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959684AC292B529A002B58A2 /* HomeScreenView.swift */; };
 		959684AF292B529B002B58A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959684AE292B529B002B58A2 /* Assets.xcassets */; };
@@ -83,7 +84,7 @@
 		9502E7BB292B65570060BECF /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		9502E7BC292B65570060BECF /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
 		9502E7BD292B65570060BECF /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		9502E7BE292B65580060BECF /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		9502E7BE292B65580060BECF /* FontsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsManager.swift; sourceTree = "<group>"; };
 		9502E7BF292B65580060BECF /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
 		9502E7C0292B65580060BECF /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		9502E7C1292B65580060BECF /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -99,6 +100,7 @@
 		9502E7E0292B71D10060BECF /* HomeScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenFeature.swift; sourceTree = "<group>"; };
 		9502E7E2292B72430060BECF /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		9502E7E4292B725B0060BECF /* SideMenuFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuFeature.swift; sourceTree = "<group>"; };
+		9502E7E6292B9A190060BECF /* AcceptRejectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptRejectButton.swift; sourceTree = "<group>"; };
 		959684A7292B529A002B58A2 /* AthenaSecurity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AthenaSecurity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959684AA292B529A002B58A2 /* AthenaSecurityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthenaSecurityApp.swift; sourceTree = "<group>"; };
 		959684AC292B529A002B58A2 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				9502E790292B5CF00060BECF /* LoginImage.swift */,
 				9502E792292B5D470060BECF /* LoginButton.swift */,
 				9502E794292B5D6D0060BECF /* CustomInputField.swift */,
+				9502E7E6292B9A190060BECF /* AcceptRejectButton.swift */,
 				9502E796292B5DF10060BECF /* CheckBox.swift */,
 				9502E798292B5E390060BECF /* PillButton.swift */,
 				9502E79A292B5E5B0060BECF /* CancelButton.swift */,
@@ -177,7 +180,7 @@
 		9502E78F292B5B860060BECF /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				9502E7BE292B65580060BECF /* FontManager.swift */,
+				9502E7BE292B65580060BECF /* FontsManager.swift */,
 				9502E7B7292B65570060BECF /* OFL.txt */,
 				9502E7BC292B65570060BECF /* Poppins-Black.ttf */,
 				9502E7C2292B65580060BECF /* Poppins-BlackItalic.ttf */,
@@ -361,11 +364,12 @@
 				9502E7B0292B64200060BECF /* WebService.swift in Sources */,
 				9502E797292B5DF10060BECF /* CheckBox.swift in Sources */,
 				9502E793292B5D470060BECF /* LoginButton.swift in Sources */,
+				9502E7E7292B9A190060BECF /* AcceptRejectButton.swift in Sources */,
 				9502E7A4292B63090060BECF /* KeychainHelper.swift in Sources */,
 				9502E7A6292B633A0060BECF /* LoginView.swift in Sources */,
 				9502E7AC292B63BC0060BECF /* Color.swift in Sources */,
 				959684AB292B529A002B58A2 /* AthenaSecurityApp.swift in Sources */,
-				9502E7D2292B65580060BECF /* FontManager.swift in Sources */,
+				9502E7D2292B65580060BECF /* FontsManager.swift in Sources */,
 				9502E7E5292B725B0060BECF /* SideMenuFeature.swift in Sources */,
 				9502E791292B5CF00060BECF /* LoginImage.swift in Sources */,
 				9502E7B6292B65120060BECF /* APIError.swift in Sources */,
