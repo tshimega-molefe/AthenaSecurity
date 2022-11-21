@@ -7,8 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9502E791292B5CF00060BECF /* LoginImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E790292B5CF00060BECF /* LoginImage.swift */; };
+		9502E793292B5D470060BECF /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E792292B5D470060BECF /* LoginButton.swift */; };
+		9502E795292B5D6D0060BECF /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E794292B5D6D0060BECF /* CustomInputField.swift */; };
+		9502E797292B5DF10060BECF /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E796292B5DF10060BECF /* CheckBox.swift */; };
+		9502E799292B5E390060BECF /* PillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E798292B5E390060BECF /* PillButton.swift */; };
+		9502E79B292B5E5B0060BECF /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E79A292B5E5B0060BECF /* CancelButton.swift */; };
+		9502E79D292B5E7E0060BECF /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E79C292B5E7D0060BECF /* Map.swift */; };
+		9502E7A2292B62E50060BECF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A1292B62E50060BECF /* AuthViewModel.swift */; };
+		9502E7A4292B63090060BECF /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A3292B63090060BECF /* KeychainHelper.swift */; };
+		9502E7A6292B633A0060BECF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A5292B633A0060BECF /* LoginView.swift */; };
+		9502E7A8292B63770060BECF /* ServiceRequestFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A7292B63770060BECF /* ServiceRequestFeature.swift */; };
+		9502E7AA292B63940060BECF /* ServiceRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A9292B63940060BECF /* ServiceRequestView.swift */; };
+		9502E7AC292B63BC0060BECF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7AB292B63BC0060BECF /* Color.swift */; };
+		9502E7AE292B63D90060BECF /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7AD292B63D90060BECF /* DismissKeyboard.swift */; };
+		9502E7B0292B64200060BECF /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7AF292B64200060BECF /* WebService.swift */; };
+		9502E7B2292B64C00060BECF /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7B1292B64C00060BECF /* WebSocketClient.swift */; };
+		9502E7B4292B64E20060BECF /* WebSocketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7B3292B64E20060BECF /* WebSocketViewModel.swift */; };
+		9502E7B6292B65120060BECF /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7B5292B65120060BECF /* APIError.swift */; };
+		9502E7CB292B65580060BECF /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7B7292B65570060BECF /* OFL.txt */; };
+		9502E7CC292B65580060BECF /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7B8292B65570060BECF /* Poppins-ExtraLight.ttf */; };
+		9502E7CD292B65580060BECF /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7B9292B65570060BECF /* Poppins-Thin.ttf */; };
+		9502E7CE292B65580060BECF /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7BA292B65570060BECF /* Poppins-LightItalic.ttf */; };
+		9502E7CF292B65580060BECF /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7BB292B65570060BECF /* Poppins-ExtraLightItalic.ttf */; };
+		9502E7D0292B65580060BECF /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7BC292B65570060BECF /* Poppins-Black.ttf */; };
+		9502E7D1292B65580060BECF /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7BD292B65570060BECF /* Poppins-ExtraBoldItalic.ttf */; };
+		9502E7D2292B65580060BECF /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7BE292B65580060BECF /* FontManager.swift */; };
+		9502E7D3292B65580060BECF /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7BF292B65580060BECF /* Poppins-BoldItalic.ttf */; };
+		9502E7D4292B65580060BECF /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7C0292B65580060BECF /* Poppins-Regular.ttf */; };
+		9502E7D5292B65580060BECF /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7C1292B65580060BECF /* Poppins-SemiBoldItalic.ttf */; };
+		9502E7D6292B65580060BECF /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7C2292B65580060BECF /* Poppins-BlackItalic.ttf */; };
+		9502E7D7292B65580060BECF /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7C3292B65580060BECF /* Poppins-Light.ttf */; };
+		9502E7D8292B65580060BECF /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7C4292B65580060BECF /* Poppins-Bold.ttf */; };
+		9502E7D9292B65580060BECF /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7C5292B65580060BECF /* Poppins-MediumItalic.ttf */; };
+		9502E7DA292B65580060BECF /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7C6292B65580060BECF /* Poppins-Italic.ttf */; };
+		9502E7DB292B65580060BECF /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7C7292B65580060BECF /* Poppins-Medium.ttf */; };
+		9502E7DC292B65580060BECF /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7C8292B65580060BECF /* Poppins-ExtraBold.ttf */; };
+		9502E7DD292B65580060BECF /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7C9292B65580060BECF /* Poppins-SemiBold.ttf */; };
+		9502E7DE292B65580060BECF /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9502E7CA292B65580060BECF /* Poppins-ThinItalic.ttf */; };
+		9502E7E1292B71D10060BECF /* HomeScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7E0292B71D10060BECF /* HomeScreenFeature.swift */; };
+		9502E7E3292B72430060BECF /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7E2292B72430060BECF /* SideMenuView.swift */; };
+		9502E7E5292B725B0060BECF /* SideMenuFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7E4292B725B0060BECF /* SideMenuFeature.swift */; };
 		959684AB292B529A002B58A2 /* AthenaSecurityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959684AA292B529A002B58A2 /* AthenaSecurityApp.swift */; };
-		959684AD292B529A002B58A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959684AC292B529A002B58A2 /* ContentView.swift */; };
+		959684AD292B529A002B58A2 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959684AC292B529A002B58A2 /* HomeScreenView.swift */; };
 		959684AF292B529B002B58A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959684AE292B529B002B58A2 /* Assets.xcassets */; };
 		959684B2292B529B002B58A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959684B1292B529B002B58A2 /* Preview Assets.xcassets */; };
 		959684BA292B52E1002B58A2 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 959684B9292B52E1002B58A2 /* ComposableArchitecture */; };
@@ -17,9 +58,50 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9502E790292B5CF00060BECF /* LoginImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginImage.swift; sourceTree = "<group>"; };
+		9502E792292B5D470060BECF /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		9502E794292B5D6D0060BECF /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
+		9502E796292B5DF10060BECF /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		9502E798292B5E390060BECF /* PillButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillButton.swift; sourceTree = "<group>"; };
+		9502E79A292B5E5B0060BECF /* CancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
+		9502E79C292B5E7D0060BECF /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		9502E7A1292B62E50060BECF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		9502E7A3292B63090060BECF /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		9502E7A5292B633A0060BECF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9502E7A7292B63770060BECF /* ServiceRequestFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestFeature.swift; sourceTree = "<group>"; };
+		9502E7A9292B63940060BECF /* ServiceRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestView.swift; sourceTree = "<group>"; };
+		9502E7AB292B63BC0060BECF /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		9502E7AD292B63D90060BECF /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
+		9502E7AF292B64200060BECF /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		9502E7B1292B64C00060BECF /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
+		9502E7B3292B64E20060BECF /* WebSocketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketViewModel.swift; sourceTree = "<group>"; };
+		9502E7B5292B65120060BECF /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		9502E7B7292B65570060BECF /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		9502E7B8292B65570060BECF /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		9502E7B9292B65570060BECF /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		9502E7BA292B65570060BECF /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		9502E7BB292B65570060BECF /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		9502E7BC292B65570060BECF /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		9502E7BD292B65570060BECF /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		9502E7BE292B65580060BECF /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		9502E7BF292B65580060BECF /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		9502E7C0292B65580060BECF /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		9502E7C1292B65580060BECF /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		9502E7C2292B65580060BECF /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		9502E7C3292B65580060BECF /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		9502E7C4292B65580060BECF /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		9502E7C5292B65580060BECF /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		9502E7C6292B65580060BECF /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		9502E7C7292B65580060BECF /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		9502E7C8292B65580060BECF /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		9502E7C9292B65580060BECF /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		9502E7CA292B65580060BECF /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		9502E7E0292B71D10060BECF /* HomeScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenFeature.swift; sourceTree = "<group>"; };
+		9502E7E2292B72430060BECF /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		9502E7E4292B725B0060BECF /* SideMenuFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuFeature.swift; sourceTree = "<group>"; };
 		959684A7292B529A002B58A2 /* AthenaSecurity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AthenaSecurity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959684AA292B529A002B58A2 /* AthenaSecurityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthenaSecurityApp.swift; sourceTree = "<group>"; };
-		959684AC292B529A002B58A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		959684AC292B529A002B58A2 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		959684AE292B529B002B58A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		959684B1292B529B002B58A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		959684BD292B54AF002B58A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -39,6 +121,97 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9502E78A292B5B010060BECF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9502E790292B5CF00060BECF /* LoginImage.swift */,
+				9502E792292B5D470060BECF /* LoginButton.swift */,
+				9502E794292B5D6D0060BECF /* CustomInputField.swift */,
+				9502E796292B5DF10060BECF /* CheckBox.swift */,
+				9502E798292B5E390060BECF /* PillButton.swift */,
+				9502E79A292B5E5B0060BECF /* CancelButton.swift */,
+				9502E79C292B5E7D0060BECF /* Map.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9502E78B292B5B360060BECF /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				9502E7A1292B62E50060BECF /* AuthViewModel.swift */,
+				9502E7A3292B63090060BECF /* KeychainHelper.swift */,
+				9502E7A5292B633A0060BECF /* LoginView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		9502E78C292B5B570060BECF /* ServiceRequest */ = {
+			isa = PBXGroup;
+			children = (
+				9502E7A7292B63770060BECF /* ServiceRequestFeature.swift */,
+				9502E7A9292B63940060BECF /* ServiceRequestView.swift */,
+			);
+			path = ServiceRequest;
+			sourceTree = "<group>";
+		};
+		9502E78D292B5B680060BECF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9502E7AB292B63BC0060BECF /* Color.swift */,
+				9502E7AD292B63D90060BECF /* DismissKeyboard.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9502E78E292B5B770060BECF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9502E7AF292B64200060BECF /* WebService.swift */,
+				9502E7B1292B64C00060BECF /* WebSocketClient.swift */,
+				9502E7B3292B64E20060BECF /* WebSocketViewModel.swift */,
+				9502E7B5292B65120060BECF /* APIError.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		9502E78F292B5B860060BECF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9502E7BE292B65580060BECF /* FontManager.swift */,
+				9502E7B7292B65570060BECF /* OFL.txt */,
+				9502E7BC292B65570060BECF /* Poppins-Black.ttf */,
+				9502E7C2292B65580060BECF /* Poppins-BlackItalic.ttf */,
+				9502E7C4292B65580060BECF /* Poppins-Bold.ttf */,
+				9502E7BF292B65580060BECF /* Poppins-BoldItalic.ttf */,
+				9502E7C8292B65580060BECF /* Poppins-ExtraBold.ttf */,
+				9502E7BD292B65570060BECF /* Poppins-ExtraBoldItalic.ttf */,
+				9502E7B8292B65570060BECF /* Poppins-ExtraLight.ttf */,
+				9502E7BB292B65570060BECF /* Poppins-ExtraLightItalic.ttf */,
+				9502E7C6292B65580060BECF /* Poppins-Italic.ttf */,
+				9502E7C3292B65580060BECF /* Poppins-Light.ttf */,
+				9502E7BA292B65570060BECF /* Poppins-LightItalic.ttf */,
+				9502E7C7292B65580060BECF /* Poppins-Medium.ttf */,
+				9502E7C5292B65580060BECF /* Poppins-MediumItalic.ttf */,
+				9502E7C0292B65580060BECF /* Poppins-Regular.ttf */,
+				9502E7C9292B65580060BECF /* Poppins-SemiBold.ttf */,
+				9502E7C1292B65580060BECF /* Poppins-SemiBoldItalic.ttf */,
+				9502E7B9292B65570060BECF /* Poppins-Thin.ttf */,
+				9502E7CA292B65580060BECF /* Poppins-ThinItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9502E7DF292B66810060BECF /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				959684AC292B529A002B58A2 /* HomeScreenView.swift */,
+				9502E7E0292B71D10060BECF /* HomeScreenFeature.swift */,
+				9502E7E2292B72430060BECF /* SideMenuView.swift */,
+				9502E7E4292B725B0060BECF /* SideMenuFeature.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
 		9596849E292B529A002B58A2 = {
 			isa = PBXGroup;
 			children = (
@@ -59,7 +232,13 @@
 			isa = PBXGroup;
 			children = (
 				959684AA292B529A002B58A2 /* AthenaSecurityApp.swift */,
-				959684AC292B529A002B58A2 /* ContentView.swift */,
+				9502E7DF292B66810060BECF /* HomeScreen */,
+				9502E78A292B5B010060BECF /* Components */,
+				9502E78B292B5B360060BECF /* Authentication */,
+				9502E78C292B5B570060BECF /* ServiceRequest */,
+				9502E78E292B5B770060BECF /* Service */,
+				9502E78D292B5B680060BECF /* Extensions */,
+				9502E78F292B5B860060BECF /* Fonts */,
 				959684AE292B529B002B58A2 /* Assets.xcassets */,
 				959684BD292B54AF002B58A2 /* Info.plist */,
 				959684B0292B529B002B58A2 /* Preview Content */,
@@ -142,8 +321,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9502E7D0292B65580060BECF /* Poppins-Black.ttf in Resources */,
+				9502E7DA292B65580060BECF /* Poppins-Italic.ttf in Resources */,
+				9502E7D9292B65580060BECF /* Poppins-MediumItalic.ttf in Resources */,
+				9502E7D6292B65580060BECF /* Poppins-BlackItalic.ttf in Resources */,
+				9502E7CC292B65580060BECF /* Poppins-ExtraLight.ttf in Resources */,
+				9502E7DD292B65580060BECF /* Poppins-SemiBold.ttf in Resources */,
+				9502E7CF292B65580060BECF /* Poppins-ExtraLightItalic.ttf in Resources */,
+				9502E7D1292B65580060BECF /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				9502E7CE292B65580060BECF /* Poppins-LightItalic.ttf in Resources */,
+				9502E7D5292B65580060BECF /* Poppins-SemiBoldItalic.ttf in Resources */,
+				9502E7D8292B65580060BECF /* Poppins-Bold.ttf in Resources */,
+				9502E7D7292B65580060BECF /* Poppins-Light.ttf in Resources */,
+				9502E7DE292B65580060BECF /* Poppins-ThinItalic.ttf in Resources */,
+				9502E7DC292B65580060BECF /* Poppins-ExtraBold.ttf in Resources */,
+				9502E7CB292B65580060BECF /* OFL.txt in Resources */,
 				959684B2292B529B002B58A2 /* Preview Assets.xcassets in Resources */,
 				959684AF292B529B002B58A2 /* Assets.xcassets in Resources */,
+				9502E7D4292B65580060BECF /* Poppins-Regular.ttf in Resources */,
+				9502E7DB292B65580060BECF /* Poppins-Medium.ttf in Resources */,
+				9502E7CD292B65580060BECF /* Poppins-Thin.ttf in Resources */,
+				9502E7D3292B65580060BECF /* Poppins-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,8 +352,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				959684AD292B529A002B58A2 /* ContentView.swift in Sources */,
+				9502E7E3292B72430060BECF /* SideMenuView.swift in Sources */,
+				9502E7A2292B62E50060BECF /* AuthViewModel.swift in Sources */,
+				9502E795292B5D6D0060BECF /* CustomInputField.swift in Sources */,
+				9502E7A8292B63770060BECF /* ServiceRequestFeature.swift in Sources */,
+				9502E7B4292B64E20060BECF /* WebSocketViewModel.swift in Sources */,
+				959684AD292B529A002B58A2 /* HomeScreenView.swift in Sources */,
+				9502E7B0292B64200060BECF /* WebService.swift in Sources */,
+				9502E797292B5DF10060BECF /* CheckBox.swift in Sources */,
+				9502E793292B5D470060BECF /* LoginButton.swift in Sources */,
+				9502E7A4292B63090060BECF /* KeychainHelper.swift in Sources */,
+				9502E7A6292B633A0060BECF /* LoginView.swift in Sources */,
+				9502E7AC292B63BC0060BECF /* Color.swift in Sources */,
 				959684AB292B529A002B58A2 /* AthenaSecurityApp.swift in Sources */,
+				9502E7D2292B65580060BECF /* FontManager.swift in Sources */,
+				9502E7E5292B725B0060BECF /* SideMenuFeature.swift in Sources */,
+				9502E791292B5CF00060BECF /* LoginImage.swift in Sources */,
+				9502E7B6292B65120060BECF /* APIError.swift in Sources */,
+				9502E7AA292B63940060BECF /* ServiceRequestView.swift in Sources */,
+				9502E799292B5E390060BECF /* PillButton.swift in Sources */,
+				9502E7E1292B71D10060BECF /* HomeScreenFeature.swift in Sources */,
+				9502E7B2292B64C00060BECF /* WebSocketClient.swift in Sources */,
+				9502E7AE292B63D90060BECF /* DismissKeyboard.swift in Sources */,
+				9502E79D292B5E7E0060BECF /* Map.swift in Sources */,
+				9502E79B292B5E5B0060BECF /* CancelButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +509,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AthenaSecurity/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Athena;
+				INFOPLIST_KEY_CFBundleDisplayName = "Athena Security";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -326,7 +546,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AthenaSecurity/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Athena;
+				INFOPLIST_KEY_CFBundleDisplayName = "Athena Security";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

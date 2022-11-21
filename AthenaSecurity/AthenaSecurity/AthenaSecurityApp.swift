@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct AthenaSecurityApp: App {
+    
+    @StateObject var userAuth = AuthViewModel()
+    @StateObject var wsViewModel = WebSocketViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeScreenView()
+                .environmentObject(userAuth)
+                .environmentObject(wsViewModel)
         }
     }
 }
