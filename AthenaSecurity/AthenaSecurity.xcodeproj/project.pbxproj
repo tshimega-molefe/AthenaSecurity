@@ -49,6 +49,7 @@
 		9502E7E3292B72430060BECF /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7E2292B72430060BECF /* SideMenuView.swift */; };
 		9502E7E5292B725B0060BECF /* SideMenuFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7E4292B725B0060BECF /* SideMenuFeature.swift */; };
 		9502E7E7292B9A190060BECF /* AcceptRejectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7E6292B9A190060BECF /* AcceptRejectButton.swift */; };
+		95732102292CF79400EEE0C7 /* MapFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95732101292CF79400EEE0C7 /* MapFeature.swift */; };
 		959684AB292B529A002B58A2 /* AthenaSecurityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959684AA292B529A002B58A2 /* AthenaSecurityApp.swift */; };
 		959684AD292B529A002B58A2 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959684AC292B529A002B58A2 /* HomeScreenView.swift */; };
 		959684AF292B529B002B58A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959684AE292B529B002B58A2 /* Assets.xcassets */; };
@@ -101,6 +102,7 @@
 		9502E7E2292B72430060BECF /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		9502E7E4292B725B0060BECF /* SideMenuFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuFeature.swift; sourceTree = "<group>"; };
 		9502E7E6292B9A190060BECF /* AcceptRejectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptRejectButton.swift; sourceTree = "<group>"; };
+		95732101292CF79400EEE0C7 /* MapFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFeature.swift; sourceTree = "<group>"; };
 		959684A7292B529A002B58A2 /* AthenaSecurity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AthenaSecurity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959684AA292B529A002B58A2 /* AthenaSecurityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthenaSecurityApp.swift; sourceTree = "<group>"; };
 		959684AC292B529A002B58A2 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				9502E79C292B5E7D0060BECF /* MapViewRepresentable.swift */,
+				95732101292CF79400EEE0C7 /* MapFeature.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				9502E791292B5CF00060BECF /* LoginImage.swift in Sources */,
 				9502E7B6292B65120060BECF /* APIError.swift in Sources */,
 				9502E7AA292B63940060BECF /* ServiceAcceptView.swift in Sources */,
+				95732102292CF79400EEE0C7 /* MapFeature.swift in Sources */,
 				9502E799292B5E390060BECF /* PillButton.swift in Sources */,
 				9502E7E1292B71D10060BECF /* HomeScreenFeature.swift in Sources */,
 				9502E7B2292B64C00060BECF /* WebSocketClient.swift in Sources */,
