@@ -17,6 +17,7 @@ struct HomeScreenFeature: ReducerProtocol {
         var connectivityState = ConnectivityState.disconnected
         var serviceAcceptFeature: ServiceAcceptFeature.State?
         var sideMenuFeature: SideMenuFeature.State?
+        var mapFeature: MapFeature.State?
     }
     
     enum Route: Equatable {
@@ -37,6 +38,7 @@ struct HomeScreenFeature: ReducerProtocol {
     enum Action: Equatable {
         case serviceAcceptAction(ServiceAcceptFeature.Action)
         case sideMenuAction(SideMenuFeature.Action)
+        case mapAction(MapFeature.Action)
         case onAppear
         case cancel
         case connectOrDisconnect
@@ -50,6 +52,8 @@ struct HomeScreenFeature: ReducerProtocol {
             enum WebSocketID {}
             
             switch action {
+                
+                // MARK: - Side Menu Actions
                 
             case .sideMenuAction(.open):
                 state.showMenu = true
@@ -66,6 +70,8 @@ struct HomeScreenFeature: ReducerProtocol {
             case .sideMenuAction(.offDuty):
                 state.onDuty = false
                 return .none
+                
+                // MARK: - Service Accept Actions
                
             case .serviceAcceptAction(.reject):
                 return .none
@@ -82,6 +88,47 @@ struct HomeScreenFeature: ReducerProtocol {
             case .serviceAcceptAction(.complete):
                 return .none
                 
+                // MARK: - Map Feature Actions
+                
+                    // Service Accept Actions that affect the mapView
+                
+            case .mapAction(.serviceAcceptAction(.reject)):
+                return .none
+                
+            case .mapAction(.serviceAcceptAction(.accept)):
+                return .none
+                
+            case .mapAction(.serviceAcceptAction(.getDirections)):
+                return .none
+                
+            case .mapAction(.serviceAcceptAction(.arrive)):
+                return .none
+                
+            case .mapAction(.serviceAcceptAction(.complete)):
+                return .none
+                
+                // Map Feature Actions that affect the mapView
+                
+            case .mapAction(.fetchAndCenterSecurityLocation):
+                return .none
+                
+            case .mapAction(.addUserLocationAnnotation):
+                return .none
+                
+            case .mapAction(.addTurnByTurnDirections):
+                return .none
+                
+            case .mapAction(.streetViewCamera):
+                return .none
+                
+            case .mapAction(.topViewCamera):
+                return .none
+                
+            case .mapAction(.removeUserLocationAnnotation):
+                return .none
+                
+                // When the home Screen Feature appears.
+                
             case .onAppear:
                 //state.serviceAcceptFeature = nil
                 state.isPresented = true
@@ -89,9 +136,11 @@ struct HomeScreenFeature: ReducerProtocol {
                 return .none
                 
             case .cancel:
-                //state.serviceAcceptFeature = nil
+                // state.serviceAcceptFeature = nil
                 state.isPresented = false
                 return .none
+                
+                // MARK: - WebSocket Enum
                     
             case .connectOrDisconnect:
                 switch state.connectivityState {
@@ -119,5 +168,7 @@ struct HomeScreenFeature: ReducerProtocol {
         .ifLet(\.serviceAcceptFeature, action: /Action.serviceAcceptAction) {
             ServiceAcceptFeature()
         }
+        
+        // TODO: Add the ifLet etc.. for the MapFeature, as immediately above.
     }
 }
