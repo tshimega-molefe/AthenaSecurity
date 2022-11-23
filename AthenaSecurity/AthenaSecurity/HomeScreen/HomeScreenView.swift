@@ -24,6 +24,31 @@ struct HomeScreenView: View {
             let _ = wsViewModel.subscribeToService()
             // Configures the Home Screen
             WithViewStore(self.store) { viewStore in
+                
+//                switch viewStore.state.route {
+                
+//                case .idle:
+//                        .none
+//                    
+//                case .respond:
+//                        .none
+//                    
+//                case .rejected:
+//                        .none
+//                    
+//                case .accepted:
+//                        .none
+//                    
+//                case .directions:
+//                        .none
+//                    
+//                case .arrived:
+//                        .none
+//
+//                    
+//                }
+            
+                
                 ZStack (alignment: .bottom){
                     MapViewRepresentable().edgesIgnoringSafeArea(.all)
                     

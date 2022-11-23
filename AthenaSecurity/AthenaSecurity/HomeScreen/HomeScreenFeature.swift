@@ -21,12 +21,12 @@ struct HomeScreenFeature: ReducerProtocol {
     }
     
     enum Route: Equatable {
+        case idle
         case respond
         case rejected
         case accepted
         case directions
         case arrived
-        case completed
     }
     
     enum ConnectivityState: Equatable {
