@@ -12,7 +12,6 @@ import ComposableArchitecture
 struct AthenaSecurityApp: App {
     
     @StateObject var userAuth = AuthViewModel()
-    @StateObject var wsViewModel = WebSocketViewModel()
     
     var body: some Scene {
         WindowGroup {
@@ -21,7 +20,6 @@ struct AthenaSecurityApp: App {
                 reducer: AnyReducer(HomeScreenFeature()),
                 environment: ()))
                 .environmentObject(userAuth)
-                .environmentObject(wsViewModel)
         }
     }
 }
