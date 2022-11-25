@@ -90,6 +90,7 @@ class MapViewController: UIViewController, AnnotationInteractionDelegate {
         // Coordinate accuracy is how close the route must come to the waypoint in order to be considered viable. It is measured in meters. A negative value indicates that the route is viable regardless of how far the route is from the waypoint.
         let origin = Waypoint(coordinate: origin, coordinateAccuracy: -1, name: "Start")
         let destination = Waypoint(coordinate: destination, coordinateAccuracy: -1, name: "Finish")
+            // The Destination will need to be fed in the location coordinate from the User Model that's communicating with the Security in the WebSocket Group
 
         // Specify that the route is intended for automobiles avoiding traffic
         let routeOptions = NavigationRouteOptions(waypoints: [origin, destination], profileIdentifier: .automobileAvoidingTraffic)
