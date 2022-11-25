@@ -120,41 +120,16 @@ struct HomeScreenFeature: ReducerProtocol {
                 
                 // MARK: - Map Feature Actions
                 
-                    // Service Accept Actions that affect the mapView
-                
-            case .mapAction(.serviceAcceptAction(.reject)):
+            case .mapAction(.showUser):
                 return .none
                 
-            case .mapAction(.serviceAcceptAction(.accept)):
+            case .mapAction(.getDirections):
                 return .none
                 
-            case .mapAction(.serviceAcceptAction(.getDirections)):
+            case .mapAction(.trackUser):
                 return .none
                 
-            case .mapAction(.serviceAcceptAction(.arrive)):
-                return .none
-                
-            case .mapAction(.serviceAcceptAction(.complete)):
-                return .none
-                
-                // Map Feature Actions that affect the mapView
-                
-            case .mapAction(.fetchAndCenterSecurityLocation):
-                return .none
-                
-            case .mapAction(.addUserLocationAnnotation):
-                return .none
-                
-            case .mapAction(.addTurnByTurnDirections):
-                return .none
-                
-            case .mapAction(.streetViewCamera):
-                return .none
-                
-            case .mapAction(.topViewCamera):
-                return .none
-                
-            case .mapAction(.removeUserLocationAnnotation):
+            case .mapAction(.removeUser):
                 return .none
                 
                 // When the home Screen Feature appears.
