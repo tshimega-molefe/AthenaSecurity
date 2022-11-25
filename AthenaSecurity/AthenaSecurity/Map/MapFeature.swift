@@ -18,6 +18,7 @@ struct MapFeature: ReducerProtocol {
         var userLocation: Location?
         var isTapped: Bool
         var isShowingMyCircle: Bool
+        var mapFrameSize: CGRect
 
     }
     

@@ -11,6 +11,7 @@ import MapboxMaps
 import MapboxCoreNavigation
 import MapboxNavigation
 import MapboxDirections
+import ComposableArchitecture
 
 
 struct CustomMapView: UIViewControllerRepresentable {
@@ -25,18 +26,31 @@ struct CustomMapView: UIViewControllerRepresentable {
 }
 
 class MapViewController: UIViewController, AnnotationInteractionDelegate {
+    // InfoMapView Variables
+    internal var infoMapView: MapView!
+    
+    
+    // NavigationMapView Variables
     var navigationMapView: NavigationMapView!
     var routeOptions: NavigationRouteOptions?
     var routeResponse: RouteResponse?
 
+    // Annotations
     var securityAnnotation: PointAnnotation?
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // NavigationMapView
         navigationMapView = NavigationMapView(frame: view.bounds)
-
         view.addSubview(navigationMapView)
+        
+        // InfoMapView Initialisers
+        let myResourceOptions = ResourceOptions(accessToken: "Athena's-Access-Token")
+        let myMapInitOptions = MapInitOptions(resourceOptions: myResourceOptions)
+        infoMapView = MapView(frame: view.bounds, mapInitOptions: myMapInitOptions)
+        infoMapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        self.view.addSubview(infoMapView)
 
         // Set the annotation manager's delegate
         navigationMapView.mapView.mapboxMap.onNext(event: .mapLoaded) { [weak self] _ in
