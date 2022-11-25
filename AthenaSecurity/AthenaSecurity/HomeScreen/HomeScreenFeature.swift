@@ -167,8 +167,8 @@ struct HomeScreenFeature: ReducerProtocol {
                 return .none
                 
                 // state.serviceAcceptFeature = nil
-                state.isPresented = false
-                return .none
+//                state.isPresented = false
+//                return .none
                 
                 // MARK: - WebSocket Enum
                     

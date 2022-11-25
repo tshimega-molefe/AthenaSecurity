@@ -13,7 +13,7 @@
 		9502E797292B5DF10060BECF /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E796292B5DF10060BECF /* CheckBox.swift */; };
 		9502E799292B5E390060BECF /* PillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E798292B5E390060BECF /* PillButton.swift */; };
 		9502E79B292B5E5B0060BECF /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E79A292B5E5B0060BECF /* CancelButton.swift */; };
-		9502E79D292B5E7E0060BECF /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E79C292B5E7D0060BECF /* MapViewRepresentable.swift */; };
+		9502E79D292B5E7E0060BECF /* CustomMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E79C292B5E7D0060BECF /* CustomMapView.swift */; };
 		9502E7A2292B62E50060BECF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A1292B62E50060BECF /* AuthViewModel.swift */; };
 		9502E7A4292B63090060BECF /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A3292B63090060BECF /* KeychainHelper.swift */; };
 		9502E7A6292B633A0060BECF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A5292B633A0060BECF /* LoginView.swift */; };
@@ -49,6 +49,8 @@
 		9502E7E5292B725B0060BECF /* SideMenuFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7E4292B725B0060BECF /* SideMenuFeature.swift */; };
 		9502E7E7292B9A190060BECF /* AcceptRejectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7E6292B9A190060BECF /* AcceptRejectButton.swift */; };
 		95732102292CF79400EEE0C7 /* MapFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95732101292CF79400EEE0C7 /* MapFeature.swift */; };
+		95872AB52930C3FE0084FC15 /* MapboxCoreNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 95872AB42930C3FE0084FC15 /* MapboxCoreNavigation */; };
+		95872AB72930C3FE0084FC15 /* MapboxNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 95872AB62930C3FE0084FC15 /* MapboxNavigation */; };
 		959684AB292B529A002B58A2 /* AthenaSecurityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959684AA292B529A002B58A2 /* AthenaSecurityApp.swift */; };
 		959684AD292B529A002B58A2 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959684AC292B529A002B58A2 /* HomeScreenView.swift */; };
 		959684AF292B529B002B58A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959684AE292B529B002B58A2 /* Assets.xcassets */; };
@@ -66,7 +68,7 @@
 		9502E796292B5DF10060BECF /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		9502E798292B5E390060BECF /* PillButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillButton.swift; sourceTree = "<group>"; };
 		9502E79A292B5E5B0060BECF /* CancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
-		9502E79C292B5E7D0060BECF /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
+		9502E79C292B5E7D0060BECF /* CustomMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapView.swift; sourceTree = "<group>"; };
 		9502E7A1292B62E50060BECF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		9502E7A3292B63090060BECF /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		9502E7A5292B633A0060BECF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95872AB72930C3FE0084FC15 /* MapboxNavigation in Frameworks */,
+				95872AB52930C3FE0084FC15 /* MapboxCoreNavigation in Frameworks */,
 				B3763FAC292BC1650091F593 /* Dependencies in Frameworks */,
 				B3763FAA292BC1650091F593 /* ComposableArchitecture in Frameworks */,
 				959684C0292B55D9002B58A2 /* MapboxMaps in Frameworks */,
@@ -217,7 +221,7 @@
 		9502E7E8292BA2590060BECF /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				9502E79C292B5E7D0060BECF /* MapViewRepresentable.swift */,
+				9502E79C292B5E7D0060BECF /* CustomMapView.swift */,
 				95732101292CF79400EEE0C7 /* MapFeature.swift */,
 			);
 			path = Map;
@@ -296,6 +300,8 @@
 				959684BF292B55D9002B58A2 /* MapboxMaps */,
 				B3763FA9292BC1650091F593 /* ComposableArchitecture */,
 				B3763FAB292BC1650091F593 /* Dependencies */,
+				95872AB42930C3FE0084FC15 /* MapboxCoreNavigation */,
+				95872AB62930C3FE0084FC15 /* MapboxNavigation */,
 			);
 			productName = AthenaSecurity;
 			productReference = 959684A7292B529A002B58A2 /* AthenaSecurity.app */;
@@ -328,6 +334,7 @@
 			packageReferences = (
 				959684BE292B55D9002B58A2 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
 				B3763FA8292BC1650091F593 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				95872AB32930C3FE0084FC15 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */,
 			);
 			productRefGroup = 959684A8292B529A002B58A2 /* Products */;
 			projectDirPath = "";
@@ -398,7 +405,7 @@
 				9502E7B2292B64C00060BECF /* WebSocketClient.swift in Sources */,
 				9502E7AE292B63D90060BECF /* DismissKeyboard.swift in Sources */,
 				B3763FAE292BCC0A0091F593 /* EmergencyModel.swift in Sources */,
-				9502E79D292B5E7E0060BECF /* MapViewRepresentable.swift in Sources */,
+				9502E79D292B5E7E0060BECF /* CustomMapView.swift in Sources */,
 				9502E79B292B5E5B0060BECF /* CancelButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -618,6 +625,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		95872AB32930C3FE0084FC15 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-navigation-ios.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		959684BE292B55D9002B58A2 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
@@ -637,6 +652,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		95872AB42930C3FE0084FC15 /* MapboxCoreNavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95872AB32930C3FE0084FC15 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */;
+			productName = MapboxCoreNavigation;
+		};
+		95872AB62930C3FE0084FC15 /* MapboxNavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95872AB32930C3FE0084FC15 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */;
+			productName = MapboxNavigation;
+		};
 		959684BF292B55D9002B58A2 /* MapboxMaps */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 959684BE292B55D9002B58A2 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;

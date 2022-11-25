@@ -48,7 +48,7 @@ struct HomeScreenView: View {
             
                 
                 ZStack (alignment: .bottom){
-                    MapViewRepresentable().edgesIgnoringSafeArea(.all)
+                    CustomMapView().edgesIgnoringSafeArea(.all)
                     
                     ZStack(alignment: .topLeading) {
                         IfLetStore(
