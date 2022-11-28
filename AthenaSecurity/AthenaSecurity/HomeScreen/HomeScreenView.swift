@@ -24,7 +24,17 @@ struct HomeScreenView: View {
             WithViewStore(self.store) { viewStore in
 
                 ZStack (alignment: .bottom){
-                    CustomMapView().edgesIgnoringSafeArea(.all)
+                    
+                    ZStack(alignment: .topLeading) {
+                        IfLetStore(
+                            self.store.scope(
+                                state: \.mapFeature,
+                                action: HomeScreenFeature.Action.mapAction)
+                        ) { mapStore in
+                            CustomMapView(store: mapStore)
+                        }
+                    }
+                    
                     
                     ZStack(alignment: .topLeading) {
                         IfLetStore(

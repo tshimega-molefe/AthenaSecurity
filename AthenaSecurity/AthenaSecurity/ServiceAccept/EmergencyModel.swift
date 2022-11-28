@@ -6,9 +6,21 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct EmergencyModel: Equatable, Codable {
     var type: String?
     var id: String?
-    var security: String?
+    var security: LocationModel?
+    var securityCoordinate: CoordinateModel?
+    var citizenCoordinate:  CoordinateModel?
+}
+
+struct LocationModel: Equatable, Codable {
+    var coordinate: CoordinateModel
+}
+
+struct CoordinateModel: Equatable, Codable {
+    var latitude: Double
+    var longitude: Double
 }

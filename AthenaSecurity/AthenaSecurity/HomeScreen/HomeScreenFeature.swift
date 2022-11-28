@@ -16,7 +16,6 @@ struct HomeScreenFeature: ReducerProtocol {
         var connectivityState = ConnectivityState.disconnected
         var serviceAcceptFeature: ServiceAcceptFeature.State?
         var sideMenuFeature: SideMenuFeature.State?
-
         var emergency: EmergencyModel?
         var mapFeature: MapFeature.State?
     }
@@ -123,6 +122,8 @@ struct HomeScreenFeature: ReducerProtocol {
                 // When the home Screen Feature appears.
                 
             case .onAppear:
+                
+                state.mapFeature = MapFeature.State()
                 return .none
                 
             case .cancel:
@@ -227,6 +228,10 @@ struct HomeScreenFeature: ReducerProtocol {
                         //return the map action for adding user + changing state
                         return .none
                         
+                    case "update.emergency":
+                        print(state.emergency)
+                        return .none
+                        
                     case "cancel.emergency":
                         print("CANCELLED")
                         state.serviceAcceptFeature = nil
@@ -250,22 +255,35 @@ struct HomeScreenFeature: ReducerProtocol {
             case .sendResponse(didSucceed: let didSucceed):
                 print(didSucceed)
                 return .none
+                
+
             case .mapAction(.calculateRoute(_, _)):
                 return .none
             case .mapAction(.longPress(_)):
                 return .none
             case .mapAction(.routeResponse(_)):
                 return .none
-            case .mapAction(.showUser):
-                return .none
-                
             case .mapAction(.getDirections):
                 return .none
-                
-            case .mapAction(.trackUser):
+            case .mapAction(.addCitizen):
                 return .none
+            case .mapAction(.removeCitizen):
+                return .none
+            case let .mapAction(.updateUserLocation(newCoordinate)):
+                print("new coordinate \(newCoordinate)")
+                let messageToSend = "{\"type\": \"update.location\", \"security\": { \"coordinate\": { \"latitude\": \(newCoordinate.latitude), \"longitude\": \(newCoordinate.longitude) } } }"
                 
-            case .mapAction(.removeUser):
+                return .task {
+                    print("DEBUG: SENDING UPDATE LOCATION: \(messageToSend)")
+                    try await websocket.send(WebSocketID.self, .string(messageToSend))
+                    return .sendResponse(didSucceed: true)
+                } catch: { _ in
+                        .sendResponse(didSucceed: false)
+                }
+                .cancellable(id: WebSocketID.self)
+                
+                
+            case .mapAction(.updateCitizenLocation(_)):
                 return .none
             }
         }
@@ -275,7 +293,8 @@ struct HomeScreenFeature: ReducerProtocol {
         .ifLet(\.serviceAcceptFeature, action: /Action.serviceAcceptAction) {
             ServiceAcceptFeature()
         }
-        
-        // TODO: Add the ifLet etc.. for the MapFeature, as immediately above.
+        .ifLet(\.mapFeature, action: /Action.mapAction) {
+            MapFeature()
+        }
     }
 }

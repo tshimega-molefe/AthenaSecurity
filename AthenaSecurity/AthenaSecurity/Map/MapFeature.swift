@@ -19,7 +19,7 @@ struct MapFeature: ReducerProtocol {
         var mapStatus: MapStatus = .idle
         var route: Route?
         var securityLocation: CLLocationCoordinate2D?
-        var userLocation: CLLocationCoordinate2D?
+        var citizenLocation: CLLocationCoordinate2D?
         var tappedCoordinate: CLLocationCoordinate2D?
         //        var isTapped: Bool
         //        var isShowingMyCircle: Bool
@@ -36,13 +36,15 @@ struct MapFeature: ReducerProtocol {
     }
     
     enum Action: Equatable {
-        case showUser
         case getDirections
-        case trackUser
-        case removeUser
+        case addCitizen
+        case removeCitizen
         case calculateRoute(origin: CLLocationCoordinate2D, destination: CLLocationCoordinate2D)
         case routeResponse(TaskResult<Route>)
         case longPress(CLLocationCoordinate2D)
+        case updateUserLocation(CLLocationCoordinate2D)
+        case updateCitizenLocation(CLLocationCoordinate2D)
+        
     }
     
     @Dependency(\.navigation) private var navigation
@@ -51,16 +53,13 @@ struct MapFeature: ReducerProtocol {
         Reduce { state , action in
             switch action {
                 
-            case .showUser:
+            case .addCitizen:
                 return .none
                 
             case .getDirections:
                 return .none
                 
-            case .trackUser:
-                return .none
-                
-            case .removeUser:
+            case .removeCitizen:
                 return .none
                 
             case .calculateRoute(origin: let origin, destination: let destination):
@@ -84,6 +83,14 @@ struct MapFeature: ReducerProtocol {
                 
             case let .routeResponse(.failure(error)):
                 print(error)
+                return .none
+                
+            case let .updateUserLocation(coordinate):
+                state.securityLocation = coordinate
+                return .none
+                
+            case let .updateCitizenLocation(coordinate):
+                state.citizenLocation = coordinate
                 return .none
             }
         }
