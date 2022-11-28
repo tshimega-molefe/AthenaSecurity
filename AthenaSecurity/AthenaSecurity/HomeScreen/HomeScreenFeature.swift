@@ -76,8 +76,8 @@ struct HomeScreenFeature: ReducerProtocol {
                 state.onDuty = false
                 return .none
                 
-            // MARK: - Service Accept Actions
-
+                // MARK: - Service Accept Actions
+                
             case .serviceAcceptAction(.reject):
                 return .none
                 
@@ -118,19 +118,7 @@ struct HomeScreenFeature: ReducerProtocol {
                 }
                 .cancellable(id: WebSocketID.self)
                 
-                // MARK: - Map Feature Actions
-                
-            case .mapAction(.showUser):
-                return .none
-                
-            case .mapAction(.getDirections):
-                return .none
-                
-            case .mapAction(.trackUser):
-                return .none
-                
-            case .mapAction(.removeUser):
-                return .none
+            
                 
                 // When the home Screen Feature appears.
                 
@@ -142,11 +130,11 @@ struct HomeScreenFeature: ReducerProtocol {
                 return .none
                 
                 // state.serviceAcceptFeature = nil
-//                state.isPresented = false
-//                return .none
+                //                state.isPresented = false
+                //                return .none
                 
                 // MARK: - WebSocket Enum
-                    
+                
             case .connectOrDisconnect:
                 switch state.connectivityState {
                     
@@ -230,9 +218,14 @@ struct HomeScreenFeature: ReducerProtocol {
                     let type = state.emergency?.type ?? ""
                     
                     switch type {
-                    
+                        
                     case "create.emergency":
                         state.serviceAcceptFeature = ServiceAcceptFeature.State()
+                        
+                        
+                    case "accept.emergency":
+                        //return the map action for adding user + changing state
+                        return .none
                         
                     case "cancel.emergency":
                         print("CANCELLED")
@@ -256,6 +249,23 @@ struct HomeScreenFeature: ReducerProtocol {
                 
             case .sendResponse(didSucceed: let didSucceed):
                 print(didSucceed)
+                return .none
+            case .mapAction(.calculateRoute(_, _)):
+                return .none
+            case .mapAction(.longPress(_)):
+                return .none
+            case .mapAction(.routeResponse(_)):
+                return .none
+            case .mapAction(.showUser):
+                return .none
+                
+            case .mapAction(.getDirections):
+                return .none
+                
+            case .mapAction(.trackUser):
+                return .none
+                
+            case .mapAction(.removeUser):
                 return .none
             }
         }

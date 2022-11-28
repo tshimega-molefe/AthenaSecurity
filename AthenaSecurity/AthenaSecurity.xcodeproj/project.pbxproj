@@ -59,6 +59,7 @@
 		B3763FAA292BC1650091F593 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B3763FA9292BC1650091F593 /* ComposableArchitecture */; };
 		B3763FAC292BC1650091F593 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = B3763FAB292BC1650091F593 /* Dependencies */; };
 		B3763FAE292BCC0A0091F593 /* EmergencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3763FAD292BCC0A0091F593 /* EmergencyModel.swift */; };
+		B38CDEC12933BE4B0005BC9D /* NavigationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CDEC02933BE4B0005BC9D /* NavigationClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +112,7 @@
 		959684B1292B529B002B58A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		959684BD292B54AF002B58A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B3763FAD292BCC0A0091F593 /* EmergencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyModel.swift; sourceTree = "<group>"; };
+		B38CDEC02933BE4B0005BC9D /* NavigationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				9502E7AF292B64200060BECF /* WebService.swift */,
 				9502E7B1292B64C00060BECF /* WebSocketClient.swift */,
 				9502E7B5292B65120060BECF /* APIError.swift */,
+				B38CDEC02933BE4B0005BC9D /* NavigationClient.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				9502E7B2292B64C00060BECF /* WebSocketClient.swift in Sources */,
 				9502E7AE292B63D90060BECF /* DismissKeyboard.swift in Sources */,
 				B3763FAE292BCC0A0091F593 /* EmergencyModel.swift in Sources */,
+				B38CDEC12933BE4B0005BC9D /* NavigationClient.swift in Sources */,
 				9502E79D292B5E7E0060BECF /* CustomMapView.swift in Sources */,
 				9502E79B292B5E5B0060BECF /* CancelButton.swift in Sources */,
 			);
