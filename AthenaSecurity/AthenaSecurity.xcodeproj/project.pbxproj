@@ -13,7 +13,6 @@
 		9502E797292B5DF10060BECF /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E796292B5DF10060BECF /* CheckBox.swift */; };
 		9502E799292B5E390060BECF /* PillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E798292B5E390060BECF /* PillButton.swift */; };
 		9502E79B292B5E5B0060BECF /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E79A292B5E5B0060BECF /* CancelButton.swift */; };
-		9502E79D292B5E7E0060BECF /* CustomMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E79C292B5E7D0060BECF /* CustomMapView.swift */; };
 		9502E7A2292B62E50060BECF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A1292B62E50060BECF /* AuthViewModel.swift */; };
 		9502E7A4292B63090060BECF /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A3292B63090060BECF /* KeychainHelper.swift */; };
 		9502E7A6292B633A0060BECF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7A5292B633A0060BECF /* LoginView.swift */; };
@@ -48,7 +47,6 @@
 		9502E7E3292B72430060BECF /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7E2292B72430060BECF /* SideMenuView.swift */; };
 		9502E7E5292B725B0060BECF /* SideMenuFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7E4292B725B0060BECF /* SideMenuFeature.swift */; };
 		9502E7E7292B9A190060BECF /* AcceptRejectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502E7E6292B9A190060BECF /* AcceptRejectButton.swift */; };
-		95732102292CF79400EEE0C7 /* MapFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95732101292CF79400EEE0C7 /* MapFeature.swift */; };
 		95872AB52930C3FE0084FC15 /* MapboxCoreNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 95872AB42930C3FE0084FC15 /* MapboxCoreNavigation */; };
 		95872AB72930C3FE0084FC15 /* MapboxNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 95872AB62930C3FE0084FC15 /* MapboxNavigation */; };
 		959684AB292B529A002B58A2 /* AthenaSecurityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959684AA292B529A002B58A2 /* AthenaSecurityApp.swift */; };
@@ -59,7 +57,7 @@
 		B3763FAA292BC1650091F593 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B3763FA9292BC1650091F593 /* ComposableArchitecture */; };
 		B3763FAC292BC1650091F593 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = B3763FAB292BC1650091F593 /* Dependencies */; };
 		B3763FAE292BCC0A0091F593 /* EmergencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3763FAD292BCC0A0091F593 /* EmergencyModel.swift */; };
-		B38CDEC12933BE4B0005BC9D /* NavigationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CDEC02933BE4B0005BC9D /* NavigationClient.swift */; };
+		B38CDEE4293656430005BC9D /* ServiceMap in Frameworks */ = {isa = PBXBuildFile; productRef = B38CDEE3293656430005BC9D /* ServiceMap */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,7 +67,6 @@
 		9502E796292B5DF10060BECF /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		9502E798292B5E390060BECF /* PillButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillButton.swift; sourceTree = "<group>"; };
 		9502E79A292B5E5B0060BECF /* CancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
-		9502E79C292B5E7D0060BECF /* CustomMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapView.swift; sourceTree = "<group>"; };
 		9502E7A1292B62E50060BECF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		9502E7A3292B63090060BECF /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		9502E7A5292B633A0060BECF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -104,7 +101,6 @@
 		9502E7E2292B72430060BECF /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		9502E7E4292B725B0060BECF /* SideMenuFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuFeature.swift; sourceTree = "<group>"; };
 		9502E7E6292B9A190060BECF /* AcceptRejectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptRejectButton.swift; sourceTree = "<group>"; };
-		95732101292CF79400EEE0C7 /* MapFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFeature.swift; sourceTree = "<group>"; };
 		959684A7292B529A002B58A2 /* AthenaSecurity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AthenaSecurity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959684AA292B529A002B58A2 /* AthenaSecurityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthenaSecurityApp.swift; sourceTree = "<group>"; };
 		959684AC292B529A002B58A2 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
@@ -112,7 +108,8 @@
 		959684B1292B529B002B58A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		959684BD292B54AF002B58A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B3763FAD292BCC0A0091F593 /* EmergencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyModel.swift; sourceTree = "<group>"; };
-		B38CDEC02933BE4B0005BC9D /* NavigationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationClient.swift; sourceTree = "<group>"; };
+		B38CDEDA29364A0D0005BC9D /* ServiceMap */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ServiceMap; path = ../../frontend/Athena/ServiceMap; sourceTree = "<group>"; };
+		B38CDEE229364F220005BC9D /* ServiceMap */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ServiceMap; path = ../../ServiceMap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95872AB72930C3FE0084FC15 /* MapboxNavigation in Frameworks */,
+				B38CDEE4293656430005BC9D /* ServiceMap in Frameworks */,
 				95872AB52930C3FE0084FC15 /* MapboxCoreNavigation in Frameworks */,
 				B3763FAC292BC1650091F593 /* Dependencies in Frameworks */,
 				B3763FAA292BC1650091F593 /* ComposableArchitecture in Frameworks */,
@@ -180,7 +178,6 @@
 				9502E7AF292B64200060BECF /* WebService.swift */,
 				9502E7B1292B64C00060BECF /* WebSocketClient.swift */,
 				9502E7B5292B65120060BECF /* APIError.swift */,
-				B38CDEC02933BE4B0005BC9D /* NavigationClient.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -221,20 +218,13 @@
 			path = HomeScreen;
 			sourceTree = "<group>";
 		};
-		9502E7E8292BA2590060BECF /* Map */ = {
-			isa = PBXGroup;
-			children = (
-				9502E79C292B5E7D0060BECF /* CustomMapView.swift */,
-				95732101292CF79400EEE0C7 /* MapFeature.swift */,
-			);
-			path = Map;
-			sourceTree = "<group>";
-		};
 		9596849E292B529A002B58A2 = {
 			isa = PBXGroup;
 			children = (
+				B38CDEDD29364A670005BC9D /* Packages */,
 				959684A9292B529A002B58A2 /* AthenaSecurity */,
 				959684A8292B529A002B58A2 /* Products */,
+				B38CDED929364A0D0005BC9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -252,7 +242,6 @@
 				959684AA292B529A002B58A2 /* AthenaSecurityApp.swift */,
 				B3763FAF292BD9C50091F593 /* SideMenu */,
 				9502E7DF292B66810060BECF /* HomeScreen */,
-				9502E7E8292BA2590060BECF /* Map */,
 				9502E78A292B5B010060BECF /* Components */,
 				9502E78B292B5B360060BECF /* Authentication */,
 				9502E78C292B5B570060BECF /* ServiceAccept */,
@@ -283,6 +272,22 @@
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
+		B38CDED929364A0D0005BC9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B38CDEDA29364A0D0005BC9D /* ServiceMap */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B38CDEDD29364A670005BC9D /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				B38CDEE229364F220005BC9D /* ServiceMap */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -305,6 +310,7 @@
 				B3763FAB292BC1650091F593 /* Dependencies */,
 				95872AB42930C3FE0084FC15 /* MapboxCoreNavigation */,
 				95872AB62930C3FE0084FC15 /* MapboxNavigation */,
+				B38CDEE3293656430005BC9D /* ServiceMap */,
 			);
 			productName = AthenaSecurity;
 			productReference = 959684A7292B529A002B58A2 /* AthenaSecurity.app */;
@@ -402,14 +408,11 @@
 				9502E791292B5CF00060BECF /* LoginImage.swift in Sources */,
 				9502E7B6292B65120060BECF /* APIError.swift in Sources */,
 				9502E7AA292B63940060BECF /* ServiceAcceptView.swift in Sources */,
-				95732102292CF79400EEE0C7 /* MapFeature.swift in Sources */,
 				9502E799292B5E390060BECF /* PillButton.swift in Sources */,
 				9502E7E1292B71D10060BECF /* HomeScreenFeature.swift in Sources */,
 				9502E7B2292B64C00060BECF /* WebSocketClient.swift in Sources */,
 				9502E7AE292B63D90060BECF /* DismissKeyboard.swift in Sources */,
 				B3763FAE292BCC0A0091F593 /* EmergencyModel.swift in Sources */,
-				B38CDEC12933BE4B0005BC9D /* NavigationClient.swift in Sources */,
-				9502E79D292B5E7E0060BECF /* CustomMapView.swift in Sources */,
 				9502E79B292B5E5B0060BECF /* CancelButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,6 +683,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B3763FA8292BC1650091F593 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = Dependencies;
+		};
+		B38CDEE3293656430005BC9D /* ServiceMap */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ServiceMap;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

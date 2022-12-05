@@ -7,6 +7,8 @@
 
 import Foundation
 import ComposableArchitecture
+import CoreLocation
+import ServiceMap
 
 struct HomeScreenFeature: ReducerProtocol {
     
@@ -16,8 +18,8 @@ struct HomeScreenFeature: ReducerProtocol {
         var connectivityState = ConnectivityState.disconnected
         var serviceAcceptFeature: ServiceAcceptFeature.State?
         var sideMenuFeature: SideMenuFeature.State?
-        var emergency: EmergencyModel?
         var mapFeature: MapFeature.State?
+        var emergency: EmergencyModel = EmergencyModel()
     }
     
     enum Route: Equatable {
@@ -81,9 +83,8 @@ struct HomeScreenFeature: ReducerProtocol {
                 return .none
                 
             case .serviceAcceptAction(.accept):
-                let messageToSend = "{\"type\": \"accept.emergency\", \"id\": \"\(state.emergency?.id ?? "")\"}"
+                let messageToSend = "{\"type\": \"accept.emergency\", \"id\": \"\(state.emergency.id ?? "")\"}"
                 return .task {
-                    print("DEBUG: SENDING ACCEPTION: \(messageToSend)")
                     try await websocket.send(WebSocketID.self, .string(messageToSend))
                     return .sendResponse(didSucceed: true)
                 } catch: { _ in
@@ -95,9 +96,8 @@ struct HomeScreenFeature: ReducerProtocol {
                 return .none
                 
             case .serviceAcceptAction(.arrive):
-                let messageToSend = "{\"type\": \"start.emergency\", \"id\": \"\(state.emergency?.id ?? "")\"}"
+                let messageToSend = "{\"type\": \"start.emergency\", \"id\": \"\(state.emergency.id ?? "")\"}"
                 return .task {
-                    print("DEBUG: SENDING STARTINGs: \(messageToSend)")
                     try await websocket.send(WebSocketID.self, .string(messageToSend))
                     return .sendResponse(didSucceed: true)
                 } catch: { _ in
@@ -107,9 +107,9 @@ struct HomeScreenFeature: ReducerProtocol {
                 
             case .serviceAcceptAction(.complete):
                 state.serviceAcceptFeature = nil
-                let messageToSend = "{\"type\": \"complete.emergency\", \"id\": \"\(state.emergency?.id ?? "")\"}"
+                let messageToSend = "{\"type\": \"complete.emergency\", \"id\": \"\(state.emergency.id ?? "")\"}"
                 return .task {
-                    print("DEBUG: SENDING COMPLETION: \(messageToSend)")
+                   
                     try await websocket.send(WebSocketID.self, .string(messageToSend))
                     return .sendResponse(didSucceed: true)
                 } catch: { _ in
@@ -117,22 +117,17 @@ struct HomeScreenFeature: ReducerProtocol {
                 }
                 .cancellable(id: WebSocketID.self)
                 
-            
+                
                 
                 // When the home Screen Feature appears.
                 
             case .onAppear:
-                
-                state.mapFeature = MapFeature.State()
+                state.mapFeature = MapFeature.State(mapMode: .security)
                 return .none
                 
             case .cancel:
                 //state.serviceAcceptFeature = nil
                 return .none
-                
-                // state.serviceAcceptFeature = nil
-                //                state.isPresented = false
-                //                return .none
                 
                 // MARK: - WebSocket Enum
                 
@@ -140,9 +135,7 @@ struct HomeScreenFeature: ReducerProtocol {
                 switch state.connectivityState {
                     
                 case .connected, .connecting:
-                    
                     state.connectivityState = .disconnected
-                    
                     return .cancel(id: WebSocketID.self)
                     
                 case .disconnected:
@@ -212,34 +205,60 @@ struct HomeScreenFeature: ReducerProtocol {
             case let .receivedSocketMessage(.success(message)):
                 if case let .string(string) = message {
                     
-                    print(string)
                     let decoder = JSONDecoder()
                     state.emergency = try! decoder.decode(EmergencyModel.self, from: string.data(using: .utf8)!)
                     
-                    let type = state.emergency?.type ?? ""
+                    let type = state.emergency.type ?? ""
                     
                     switch type {
                         
+                    case "renew.emergency":
+                        switch state.emergency.status {
+                        case "ACCEPTED":
+                            state.serviceAcceptFeature = ServiceAcceptFeature.State(route: .accepted)
+                            return .none
+                        
+                        case "IN PROGRESS":
+                            state.serviceAcceptFeature = ServiceAcceptFeature.State(route: .arrived)
+                        
+                        case "REQUESTED":
+                            state.serviceAcceptFeature = ServiceAcceptFeature.State(route: .respond)
+                            
+                        default:
+                            return .none
+                            
+                        }
+                        
                     case "create.emergency":
                         state.serviceAcceptFeature = ServiceAcceptFeature.State()
-                        
                         
                     case "accept.emergency":
                         //return the map action for adding user + changing state
                         return .none
                         
                     case "update.emergency":
-                        print(state.emergency)
-                        return .none
+                        if let citizen = state.emergency.citizen {
+                            return .task { [citizenCoordinate = citizen.coordinate] in
+                                
+                                let lat = citizenCoordinate.latitude
+                                let long = citizenCoordinate.longitude
+                                let coordinate = CLLocationCoordinate2DMake(lat, long)
+                                
+                                return .mapAction(.updateCitizenLocation(coordinate))
+                            }
+                        }
                         
                     case "cancel.emergency":
-                        print("CANCELLED")
+                        state.mapFeature?.citizenLocation = nil
                         state.serviceAcceptFeature = nil
+                        return .none
                         
                     case "start.emergency":
                         return .none
                         
                     case "complete.emergency":
+                        state.mapFeature?.citizenLocation = nil
+                        state.serviceAcceptFeature = nil
                         return.none
                         
                     default:
@@ -256,7 +275,7 @@ struct HomeScreenFeature: ReducerProtocol {
                 print(didSucceed)
                 return .none
                 
-
+                
             case .mapAction(.calculateRoute(_, _)):
                 return .none
             case .mapAction(.longPress(_)):
@@ -265,16 +284,17 @@ struct HomeScreenFeature: ReducerProtocol {
                 return .none
             case .mapAction(.getDirections):
                 return .none
-            case .mapAction(.addCitizen):
-                return .none
             case .mapAction(.removeCitizen):
                 return .none
-            case let .mapAction(.updateUserLocation(newCoordinate)):
-                print("new coordinate \(newCoordinate)")
+                
+            case .mapAction(.updateCitizenLocation(_)):
+                return .none
+                
+            case let .mapAction(.updateSecurityLocation(newCoordinate)):
+                
                 let messageToSend = "{\"type\": \"update.location\", \"security\": { \"coordinate\": { \"latitude\": \(newCoordinate.latitude), \"longitude\": \(newCoordinate.longitude) } } }"
                 
                 return .task {
-                    print("DEBUG: SENDING UPDATE LOCATION: \(messageToSend)")
                     try await websocket.send(WebSocketID.self, .string(messageToSend))
                     return .sendResponse(didSucceed: true)
                 } catch: { _ in
@@ -282,9 +302,6 @@ struct HomeScreenFeature: ReducerProtocol {
                 }
                 .cancellable(id: WebSocketID.self)
                 
-                
-            case .mapAction(.updateCitizenLocation(_)):
-                return .none
             }
         }
         .ifLet(\.sideMenuFeature, action: /Action.sideMenuAction) {

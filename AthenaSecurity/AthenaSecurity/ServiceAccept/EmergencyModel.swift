@@ -11,9 +11,9 @@ import CoreLocation
 struct EmergencyModel: Equatable, Codable {
     var type: String?
     var id: String?
+    var status: String?
     var security: LocationModel?
-    var securityCoordinate: CoordinateModel?
-    var citizenCoordinate:  CoordinateModel?
+    var citizen: LocationModel?
 }
 
 struct LocationModel: Equatable, Codable {

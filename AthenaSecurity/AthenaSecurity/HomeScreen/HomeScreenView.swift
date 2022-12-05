@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ComposableArchitecture
+import ServiceMap
 
 struct HomeScreenView: View {
     
@@ -31,7 +32,7 @@ struct HomeScreenView: View {
                                 state: \.mapFeature,
                                 action: HomeScreenFeature.Action.mapAction)
                         ) { mapStore in
-                            CustomMapView(store: mapStore)
+                            ServiceMapView(store: mapStore)
                         }
                     }
                     
@@ -55,8 +56,6 @@ struct HomeScreenView: View {
                     }
                 }
                 .edgesIgnoringSafeArea(.all)
-                
-                // On Appear is for Testing...
                 .onAppear {
                     viewStore.send(.onAppear)
                     viewStore.send(.connectOrDisconnect)
